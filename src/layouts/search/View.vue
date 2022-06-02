@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'MainIndexView',
+    name: 'SearchIndexView',
   };
 </script>
 

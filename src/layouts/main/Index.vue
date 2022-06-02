@@ -1,20 +1,20 @@
 <template>
   <v-app>
     <AppBar />
-    <MainView />
+    <MainIndexView />
     <Footer />
   </v-app>
 </template>
 
 <script>
   import AppBar from '@/layouts/main/AppBar.vue';
-  import MainView from '@/layouts/main/View.vue';
+  import MainIndexView from '@/layouts/main/View.vue';
   import Footer from '@/layouts/main/Footer.vue';
   export default {
-    name: 'IndexVue',
+    name: 'MainIndex',
     components: {
       AppBar,
-      MainView,
+      MainIndexView,
       Footer,
     },
   };

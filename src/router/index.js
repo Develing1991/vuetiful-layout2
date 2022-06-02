@@ -7,14 +7,44 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'root',
+    name: 'MainRoot',
     component: () => import('@/layouts/main/Index.vue'),
     children: [
       {
-        path: '/',
-        name: 'main',
+        path: '/', //나중에 맨밑으로가게하기
+        name: 'MainView',
         component: () =>
-          import(/* webpackChunkName: "main" */ '@/views/main/Main.vue'),
+          import(/* webpackChunkName: "main" */ '@/views/main/MainView.vue'),
+      },
+    ],
+  },
+  {
+    path: '/search',
+    name: 'SearchRoot',
+    component: () => import('@/layouts/search/Index.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'SearchView',
+        component: () =>
+          import(
+            /* webpackChunkName: "search" */ '@/views/search/SearchView.vue'
+          ),
+      },
+    ],
+  },
+  {
+    path: '/category',
+    name: 'CategoryRoot',
+    component: () => import('@/layouts/category/Index.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'CategoryView',
+        component: () =>
+          import(
+            /* webpackChunkName: "category" */ '@/views/category/CategoryView.vue'
+          ),
       },
     ],
   },

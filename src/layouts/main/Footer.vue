@@ -9,7 +9,7 @@
         <span>검색</span>
         <v-icon>mdi-magnify </v-icon>
       </v-btn>
-      <v-btn to="/cate">
+      <v-btn to="/category">
         <span>카테고리</span>
         <v-icon>mdi-menu</v-icon>
         <!-- <v-icon>mdi-menu-open</v-icon> -->
@@ -22,7 +22,7 @@
         <!-- <v-icon>mdi-cart-heart</v-icon> -->
         <v-icon>mdi-hand-heart-outline</v-icon>
       </v-btn>
-      <v-btn to="/myhome">
+      <v-btn to="/my-page">
         <span>마이</span>
         <!-- <v-icon>mdi-account-circle</v-icon> -->
         <v-icon>mdi-account-circle-outline</v-icon>
@@ -34,6 +34,9 @@
 <script>
   export default {
     name: 'MainFooter',
-    data: () => ({ value: 1 }),
+    data: () => ({ value: 0 }),
+    mounted() {
+      this.value = 0;
+    },
   };
 </script>

@@ -23,7 +23,10 @@
       </div>
       <!-- <v-app-bar-title>Title</v-app-bar-title> -->
       <v-spacer></v-spacer>
-      <v-icon class="px-3">mdi-magnify</v-icon>
+      <router-link to="/search" class="router-link-underline-delete">
+        <v-icon class="px-3">mdi-magnify</v-icon>
+      </router-link>
+
       <v-badge color="pink" content="6" offset-x="25" offset-y="15">
         <v-icon class="px-3">mdi-bell-outline</v-icon>
       </v-badge>

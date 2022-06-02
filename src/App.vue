@@ -10,4 +10,8 @@
   };
 </script>
 
-<style scoped></style>
+<style>
+  .router-link-underline-delete {
+    text-decoration: none;
+  }
+</style>
