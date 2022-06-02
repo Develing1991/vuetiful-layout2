@@ -30,10 +30,12 @@
         <v-icon class="px-3">mdi-open-in-new</v-icon>
 
         <template v-slot:extension>
-          <v-tabs align-with-title :fixed-tabs="false">
-            <v-tab>Tab 1</v-tab>
-            <v-tab>Tab 2</v-tab>
-            <v-tab>Tab 3</v-tab>
+          <v-tabs align-with-title fixed-tabs class="px-0" show-arrows>
+            <v-tab class="ml-0"><v-icon>mdi-history</v-icon></v-tab>
+            <v-tab><v-icon>mdi-history</v-icon></v-tab>
+            <v-tab><v-icon>mdi-history</v-icon></v-tab>
+            <v-tab><v-icon>mdi-history</v-icon></v-tab>
+            <v-tab><v-icon>mdi-history</v-icon></v-tab>
           </v-tabs>
         </template>
       </v-app-bar>
@@ -53,10 +55,9 @@
       <router-view />
     </v-main>
     <v-footer>
-      <v-bottom-navigation :value="value" color="primary" fixed>
+      <v-bottom-navigation :value="value" color="teal" grow fixed fluid>
         <v-btn>
           <span>Recents</span>
-
           <v-icon>mdi-history</v-icon>
         </v-btn>
 
@@ -66,6 +67,16 @@
           <v-icon>mdi-heart</v-icon>
         </v-btn>
 
+        <v-btn>
+          <span>Nearby</span>
+
+          <v-icon>mdi-map-marker</v-icon>
+        </v-btn>
+        <v-btn>
+          <span>Nearby</span>
+
+          <v-icon>mdi-map-marker</v-icon>
+        </v-btn>
         <v-btn>
           <span>Nearby</span>
 
