@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto">
+  <!-- <v-card class="mx-auto">
     <v-list>
       <v-list-group
         v-for="item in items"
@@ -18,7 +18,6 @@
 
         <v-list-item v-for="child in item.items" :key="child.title">
           <v-list-item-avatar>
-            <!-- <v-icon class="orange" dark>mdi-silverware-fork-knife</v-icon> -->
             <v-img :src="child.url"></v-img>
           </v-list-item-avatar>
           <v-list-item-content>
@@ -27,12 +26,46 @@
         </v-list-item>
       </v-list-group>
     </v-list>
-  </v-card>
+  </v-card> -->
+  <div>
+    <v-btn @click="all"> all </v-btn>
+    <v-expansion-panels v-model="panel" multiple>
+      <v-expansion-panel v-for="(item, i) in items" :key="i">
+        <v-expansion-panel-header>{{ item.title }}</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-container fluid>
+            <v-row>
+              <v-col
+                v-for="subItem in item.items"
+                :key="subItem.title"
+                cols="4"
+              >
+                <img
+                  :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`"
+                  alt="lorem"
+                  class="image"
+                  height="100%"
+                  width="100%"
+                />
+                <!-- :src="susbItem.url" -->
+              </v-col>
+            </v-row>
+          </v-container>
+          <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. -->
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+  </div>
 </template>
 
 <script>
   export default {
     data: () => ({
+      allClicked: false,
+      panel: [],
       items: [
         {
           action: 'mdi-coffee',
@@ -128,6 +161,20 @@
         },
       ],
     }),
+
+    methods: {
+      all() {
+        this.allClicked = !this.allClicked;
+        this.panel = [];
+        if (this.allClicked) {
+          this.items.forEach((item, index) => {
+            this.panel.push(index);
+          });
+        }
+      },
+      // Reset the panel
+      none() {},
+    },
   };
 </script>
 
