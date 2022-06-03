@@ -6,8 +6,8 @@
           <v-col cols="1" class="px-0"> </v-col>
           <v-col cols="10" class="px-0"> </v-col>
           <v-col cols="1" class="px-0">
-            <v-btn icon>
-              <v-icon class="mt-1" @click="$router.go(-1)">mdi-close</v-icon>
+            <v-btn icon to="/">
+              <v-icon class="mt-1">mdi-close</v-icon>
             </v-btn>
           </v-col>
         </v-row>
@@ -18,7 +18,7 @@
 
 <script>
   export default {
-    name: 'SearchAppBar',
+    name: 'CategoryAppBar',
     // data() {
     //   return {
     //     searchText: '',

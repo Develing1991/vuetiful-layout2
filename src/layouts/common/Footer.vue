@@ -1,7 +1,7 @@
 <template>
   <v-footer>
     <v-bottom-navigation :value="value" color="primary" grow fixed fluid>
-      <v-btn>
+      <v-btn to="/">
         <span>홈</span>
         <v-icon>mdi-home-outline</v-icon>
       </v-btn>

@@ -8,7 +8,9 @@
       <v-container fluid>
         <v-row justify="center" align="center">
           <v-col cols="1" class="px-0">
-            <v-icon class="mt-1" @click="$router.go(-1)">mdi-arrow-left</v-icon>
+            <v-icon class="mt-1" @click="$router.push({ path: '/' })"
+              >mdi-arrow-left</v-icon
+            >
             <!-- >mdi-chevron-left -->
           </v-col>
           <v-col cols="10" class="px-0">
