@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card id="productAppBar">
     <!-- <v-app-bar app color="white elevation-1">
       <v-text-field> </v-text-field>
       <v-icon class="px-3">mdi-magnify</v-icon>
@@ -8,12 +8,10 @@
       <v-container fluid>
         <v-row justify="center" align="center">
           <v-col cols="1" class="px-0">
-            <v-icon class="mt-1" @click="$router.push({ path: '/' })"
-              >mdi-arrow-left</v-icon
-            >
+            <v-icon class="mt-1" @click="$router.go(-1)">mdi-arrow-left</v-icon>
             <!-- >mdi-chevron-left -->
           </v-col>
-          <v-col cols="10" class="px-0">
+          <v-col cols="9" class="px-0">
             <v-text-field
               outlined
               class="px-2 pt-7"
@@ -26,16 +24,24 @@
             >
               <v-icon
                 slot="append"
-                :class="{ showIcon: hasText }"
+                :class="{ closeIcon: hasText }"
                 @click="removeSearchText()"
               >
                 mdi-close-circle
               </v-icon>
             </v-text-field>
           </v-col>
+
           <v-col cols="1" class="px-0">
-            <v-btn icon @click="doSearch()">
-              <v-icon class="pt-1">mdi-magnify</v-icon>
+            <v-btn icon @click="$router.push({ path: '/' })">
+              <v-icon class="pt-1">mdi-home-outline</v-icon>
+            </v-btn>
+          </v-col>
+          <v-col cols="1" class="px-0">
+            <v-btn icon @click="$router.push({ path: '/wish' })">
+              <v-icon class="pt-1">mdi-cart-heart</v-icon>
+              <!-- <v-icon class="pt-1">mdi-heart-outline</v-icon> -->
+              <!-- <v-icon class="pt-1">mdi-hand-heart-outline</v-icon> -->
             </v-btn>
           </v-col>
         </v-row>
@@ -75,7 +81,7 @@
 </script>
 
 <style scoped>
-  .showIcon {
+  .closeIcon {
     visibility: hidden;
   }
 </style>

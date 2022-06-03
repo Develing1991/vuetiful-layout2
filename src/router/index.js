@@ -49,6 +49,37 @@ const routes = [
     ],
   },
   {
+    path: '/product',
+    name: 'ProductRoot',
+    component: () => import('@/layouts/product/Index.vue'),
+    children: [
+      {
+        path: 'list',
+        name: 'ProductList',
+        component: () =>
+          import(
+            /* webpackChunkName: "product" */ '@/views/product/ProductList.vue'
+          ),
+      },
+      {
+        path: 'detail/:id',
+        name: 'ProductDetail',
+        component: () =>
+          import(
+            /* webpackChunkName: "product" */ '@/views/product/ProductDetail.vue'
+          ),
+      },
+      {
+        path: '/',
+        name: 'ProductView',
+        component: () =>
+          import(
+            /* webpackChunkName: "product" */ '@/views/product/ProductView.vue'
+          ),
+      },
+    ],
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting

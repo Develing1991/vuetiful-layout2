@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <router-view />
+    <!-- 트랜지션 적용하기 -->
+    <router-view></router-view>
   </v-app>
 </template>
 
