@@ -40,7 +40,7 @@
     methods: {
       scrollTop() {
         const options = {
-          duration: 100, //this.duration,
+          duration: 50, //this.duration,
           offset: 0, //this.offset,
           easing: 'linear', //this.easing, easeInOutCubic
         };
@@ -51,8 +51,8 @@
       handleScroll() {
         const scrollPosition =
           window.scrollY || document.documentElement.scrollTop;
-        this.scrollShow = scrollPosition > 800 ? true : false;
-        console.log(this.scrollShow);
+        this.scrollShow = scrollPosition > 400 ? true : false;
+        //console.log(this.scrollShow);
       },
     },
     mounted() {

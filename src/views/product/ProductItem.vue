@@ -21,17 +21,16 @@
         </v-list-item-title>
         <v-list-item-subtitle>무료배송</v-list-item-subtitle>
       </v-list-item-content>
-
-      <!-- <v-icon class="float-left" @click="aa()">mdi-heart-outline</v-icon> -->
     </v-list-item>
-    <v-btn
-      elevation="0"
+
+    <!-- <v-btn
+      class="elevation-0"
       fab
       x-small
       style="position: absolute; top: 10px; right: 10px"
     >
       <v-icon>mdi-heart-outline</v-icon>
-    </v-btn>
+    </v-btn> -->
   </v-card>
 </template>
 

@@ -16,7 +16,7 @@
           <v-col cols="10" class="px-0">
             <v-text-field
               outlined
-              class="px-2 pt-7"
+              class="px-1 pt-7"
               dense
               color="111"
               ref="SearchInput"
@@ -35,7 +35,7 @@
           </v-col>
           <v-col cols="1" class="px-0">
             <v-btn icon @click="doSearch()">
-              <v-icon class="pt-1">mdi-magnify</v-icon>
+              <v-icon class="pt-1 pr-2">mdi-magnify</v-icon>
             </v-btn>
           </v-col>
         </v-row>

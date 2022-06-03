@@ -14,10 +14,9 @@
           <v-col cols="9" class="px-0">
             <v-text-field
               outlined
-              class="px-2 pt-7"
+              class="px-1 pt-7"
               dense
               color="111"
-              ref="SearchInput"
               placeholder="검색어 입력"
               v-model="searchText"
               @keydown.enter="doSearch()"
@@ -32,13 +31,13 @@
             </v-text-field>
           </v-col>
 
-          <v-col cols="1" class="px-0">
-            <v-btn icon @click="$router.push({ path: '/' })">
+          <v-col cols="1" class="px-0 pl-1">
+            <v-btn icon @click="$router.push({ path: '/' })" small>
               <v-icon class="pt-1">mdi-home-outline</v-icon>
             </v-btn>
           </v-col>
-          <v-col cols="1" class="px-0">
-            <v-btn icon @click="$router.push({ path: '/wish' })">
+          <v-col cols="1" class="px-0 pl-1">
+            <v-btn icon @click="$router.push({ path: '/wish' })" small>
               <v-icon class="pt-1">mdi-cart-heart</v-icon>
               <!-- <v-icon class="pt-1">mdi-heart-outline</v-icon> -->
               <!-- <v-icon class="pt-1">mdi-hand-heart-outline</v-icon> -->
@@ -75,7 +74,7 @@
       },
     },
     mounted() {
-      this.$refs.SearchInput.focus();
+      //this.$refs.SearchInput.focus();
     },
   };
 </script>
