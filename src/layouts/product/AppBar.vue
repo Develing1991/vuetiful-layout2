@@ -23,7 +23,7 @@
             >
               <v-icon
                 slot="append"
-                :class="{ closeIcon: hasText }"
+                :class="{ 'd-none': hasText }"
                 @click="removeSearchText()"
               >
                 mdi-close-circle
@@ -79,8 +79,4 @@
   };
 </script>
 
-<style scoped>
-  .closeIcon {
-    visibility: hidden;
-  }
-</style>
+<style></style>
