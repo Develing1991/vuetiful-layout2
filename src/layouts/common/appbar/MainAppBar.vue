@@ -53,7 +53,7 @@
 
 <script>
   export default {
-    name: 'CommonAppBar',
+    name: 'CommonMainAppBar',
   };
 </script>
 

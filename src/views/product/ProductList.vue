@@ -44,8 +44,8 @@
           offset: 0, //this.offset,
           easing: 'linear', //this.easing, easeInOutCubic
         };
-        // id="productAppBar"는 /layout/product/AppBar.vue에 있음
-        const target = document.querySelector('#productAppBar');
+        // id="commonSearchAppbar"는 /layout/common/appbar/SearchAppbar.vue에 있음
+        const target = document.querySelector('#commonSearchAppbar');
         this.$vuetify.goTo(target, options);
       },
       handleScroll() {
@@ -57,7 +57,7 @@
     },
     mounted() {
       window.addEventListener('scroll', this.handleScroll);
-      console.log(this.$route.params);
+      console.log(this.$route.params.searchTerm ?? ''); //nullish
     },
   };
 </script>
