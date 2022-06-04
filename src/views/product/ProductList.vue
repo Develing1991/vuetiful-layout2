@@ -2,7 +2,7 @@
   <!-- <v-container fluid>
     <ProductItem />
   </v-container> -->
-  <v-container>
+  <div>
     <ProductItem v-for="i in 32" :key="i" />
 
     <v-fab-transition>
@@ -22,7 +22,7 @@
         </v-btn>
       </transition>
     </v-fab-transition>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -51,7 +51,7 @@
       handleScroll() {
         const scrollPosition =
           window.scrollY || document.documentElement.scrollTop;
-        this.scrollShow = scrollPosition > 400 ? true : false;
+        this.scrollShow = scrollPosition > 200 ? true : false;
         //console.log(this.scrollShow);
       },
     },
