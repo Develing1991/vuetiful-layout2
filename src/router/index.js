@@ -6,12 +6,12 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/main',
     name: 'MainRoot',
     component: () => import('@/layouts/main/Index.vue'),
     children: [
       {
-        path: '/', //나중에 맨밑으로가게하기
+        path: 'view', //나중에 맨밑으로가게하기
         name: 'MainView',
         component: () =>
           import(/* webpackChunkName: "main" */ '@/views/main/MainView.vue'),
@@ -24,7 +24,7 @@ const routes = [
     component: () => import('@/layouts/search/Index.vue'),
     children: [
       {
-        path: 'rcnt',
+        path: 'rcntView',
         name: 'SearchRcntView',
         component: () =>
           import(
@@ -32,7 +32,7 @@ const routes = [
           ),
       },
       {
-        path: '',
+        path: 'view',
         name: 'SearchView',
         component: () =>
           import(
@@ -47,7 +47,7 @@ const routes = [
     component: () => import('@/layouts/category/Index.vue'),
     children: [
       {
-        path: '/',
+        path: 'view',
         name: 'CategoryView',
         component: () =>
           import(
@@ -78,12 +78,25 @@ const routes = [
           ),
       },
       {
-        path: '/',
+        path: 'view',
         name: 'ProductView',
         component: () =>
           import(
             /* webpackChunkName: "product" */ '@/views/product/ProductView.vue'
           ),
+      },
+    ],
+  },
+  {
+    path: '/wish',
+    name: 'WishRoot',
+    component: () => import('@/layouts/wish/Index.vue'),
+    children: [
+      {
+        path: 'view',
+        name: 'WishView',
+        component: () =>
+          import(/* webpackChunkName: "wish" */ '@/views/wish/WishView.vue'),
       },
     ],
   },

@@ -31,12 +31,12 @@
           <!-- 상품리스트뷰 홈, 찜리스 아이콘 -->
           <template v-if="$route.name == 'ProductList'">
             <v-col cols="1" class="px-0 pl-1">
-              <v-btn icon @click="$router.push({ path: '/' })" small>
+              <v-btn icon @click="$router.push({ name: 'MainView' })" small>
                 <v-icon class="pt-1">mdi-home-outline</v-icon>
               </v-btn>
             </v-col>
             <v-col cols="1" class="px-0 pl-1">
-              <v-btn icon @click="$router.push({ path: '/wish' })" small>
+              <v-btn icon @click="$router.push({ name: 'WishView' })" small>
                 <v-icon class="pt-1">mdi-cart-heart</v-icon>
               </v-btn>
             </v-col>
