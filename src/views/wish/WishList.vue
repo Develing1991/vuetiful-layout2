@@ -1,15 +1,12 @@
 <template>
-  <!-- <v-container fluid>
-    <ProductItem />
-  </v-container> -->
   <div>
-    <ProductItem v-for="i in 32" :key="i" />
+    <WishItem v-for="i in 32" :key="i" />
 
     <v-fab-transition>
       <transition name="slide-fade">
         <v-btn
           v-if="scrollShow"
-          color="grey lighten-3"
+          color="grey lighten-3 mb-13"
           fab
           small
           fixed
@@ -26,11 +23,11 @@
 </template>
 
 <script>
-  import ProductItem from '@/views/product/ProductItem.vue';
+  import WishItem from '@/views/wish/WishItem.vue';
   export default {
-    name: 'ProductList',
+    name: 'WishList',
     components: {
-      ProductItem,
+      WishItem,
     },
     data() {
       return {
@@ -45,7 +42,7 @@
           easing: 'linear', //this.easing, easeInOutCubic
         };
         // id="commonSearchAppbar"는 /layout/common/appbar/SearchAppbar.vue에 있음
-        const target = document.querySelector('#commonSearchAppbar');
+        const target = document.querySelector('#wishAppbar');
         this.$vuetify.goTo(target, options);
       },
       handleScroll() {
@@ -53,6 +50,7 @@
           window.scrollY || document.documentElement.scrollTop;
         this.scrollShow = scrollPosition > 200 ? true : false;
         //console.log(this.scrollShow);
+        console.log(this.scrollShow);
       },
     },
     mounted() {

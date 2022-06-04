@@ -98,6 +98,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "wish" */ '@/views/wish/WishView.vue'),
       },
+      {
+        path: 'list',
+        name: 'WishList',
+        component: () =>
+          import(/* webpackChunkName: "wish" */ '@/views/wish/WishList.vue'),
+      },
     ],
   },
   {

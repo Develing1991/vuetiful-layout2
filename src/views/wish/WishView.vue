@@ -1,9 +1,14 @@
 <template>
-  <div>wish</div>
+  <WishList />
 </template>
 
 <script>
-  export default {};
+  import WishList from '@/views/wish/WishList.vue';
+  export default {
+    components: {
+      WishList,
+    },
+  };
 </script>
 
 <style></style>
