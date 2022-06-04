@@ -7,7 +7,7 @@
             <v-icon class="mt-1" @click="$router.go(-1)">mdi-arrow-left</v-icon>
             <!-- >mdi-chevron-left -->
           </v-col>
-          <v-col :cols="$route.name == 'ProductList' ? 9 : 10" class="px-0">
+          <v-col :cols="isProductRoute ? 9 : 10" class="px-0">
             <v-text-field
               hide-details
               outlined
@@ -29,7 +29,8 @@
             </v-text-field>
           </v-col>
           <!-- 상품리스트뷰 홈, 찜리스 아이콘 -->
-          <template v-if="$route.name == 'ProductList'">
+
+          <template v-if="isProductRoute">
             <v-col cols="1" class="px-0 pl-1">
               <v-btn icon @click="$router.push({ name: 'MainView' })" small>
                 <v-icon class="pt-1">mdi-home-outline</v-icon>
@@ -66,6 +67,12 @@
     computed: {
       hasText() {
         return !(this.searchTerm.length > 0);
+      },
+      isProductRoute() {
+        return (
+          this.$route.name === 'ProductDetail' ||
+          this.$route.name === 'ProductList'
+        );
       },
     },
     methods: {

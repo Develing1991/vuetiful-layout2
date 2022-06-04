@@ -6,7 +6,8 @@
       <transition name="slide-fade">
         <v-btn
           v-if="scrollShow"
-          color="grey lighten-3 mb-13"
+          color="grey lighten-3 "
+          class="mb-13"
           fab
           small
           fixed
@@ -50,7 +51,6 @@
           window.scrollY || document.documentElement.scrollTop;
         this.scrollShow = scrollPosition > 200 ? true : false;
         //console.log(this.scrollShow);
-        console.log(this.scrollShow);
       },
     },
     mounted() {
