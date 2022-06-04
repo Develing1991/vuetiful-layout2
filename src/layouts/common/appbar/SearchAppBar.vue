@@ -19,6 +19,7 @@
               @keydown.enter="doSearch()"
               @focus="focusSearchInput()"
             >
+              <!-- clearable -->
               <v-icon
                 slot="append"
                 :class="{ 'd-none': hasText }"

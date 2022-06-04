@@ -107,6 +107,21 @@ const routes = [
     ],
   },
   {
+    path: '/myInfo',
+    name: 'MyInfoRoot',
+    component: () => import('@/layouts/myInfo/Index.vue'),
+    children: [
+      {
+        path: 'view',
+        name: 'MyInfoView',
+        component: () =>
+          import(
+            /* webpackChunkName: "myInfo" */ '@/views/myInfo/MyInfoView.vue'
+          ),
+      },
+    ],
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting

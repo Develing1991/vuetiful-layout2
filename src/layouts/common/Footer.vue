@@ -22,7 +22,7 @@
         <v-icon>mdi-cart-heart</v-icon>
         <!-- <v-icon>mdi-hand-heart-outline</v-icon> -->
       </v-btn>
-      <v-btn to="/myPage/view">
+      <v-btn to="/myInfo/view">
         <span>마이</span>
         <!-- <v-icon>mdi-account-circle</v-icon> -->
         <v-icon>mdi-account-outline</v-icon>
