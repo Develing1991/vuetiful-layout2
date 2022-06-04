@@ -21,7 +21,7 @@
               placeholder="검색어 입력"
               v-model="searchTerm"
               @keydown.enter="doSearch()"
-              @focus="$router.push({ path: '/search/rcnt' })"
+              @focus="isGoRcntView()"
             >
               <!-- @blur="$router.go(-1)" -->
               <!-- @focus="$router.push({ path: '/search/rcnt' })"
@@ -73,6 +73,12 @@
         this.searchTerm = '';
         this.$router.go(-1);
         // this.$router.push({ path: '/search' });
+      },
+      isGoRcntView() {
+        //자기자신일경우는 아무 동작안함
+        if (this.$route.name !== 'SearchRcntView') {
+          this.$router.push({ path: '/search/rcnt' });
+        }
       },
     },
     mounted() {
