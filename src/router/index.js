@@ -24,7 +24,15 @@ const routes = [
     component: () => import('@/layouts/search/Index.vue'),
     children: [
       {
-        path: '/',
+        path: 'rcnt',
+        name: 'SearchRcntView',
+        component: () =>
+          import(
+            /* webpackChunkName: "search" */ '@/views/search/SearchRcntView.vue'
+          ),
+      },
+      {
+        path: '',
         name: 'SearchView',
         component: () =>
           import(

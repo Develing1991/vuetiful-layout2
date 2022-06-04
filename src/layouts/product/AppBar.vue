@@ -13,8 +13,9 @@
           </v-col>
           <v-col cols="9" class="px-0">
             <v-text-field
+              hide-details
               outlined
-              class="px-1 pt-7"
+              class="px-1"
               dense
               color="111"
               placeholder="검색어 입력"

@@ -14,7 +14,7 @@
                 small
                 @click="closeBtnShow = false"
               >
-                <v-icon color="success">mdi-check-bold </v-icon>
+                <v-icon color="success">mdi-check-underline </v-icon>
               </v-btn>
               <v-btn v-else icon v-bind="attrs" v-on="on" small>
                 <!-- <v-icon>mdi-cog-outline </v-icon> -->
@@ -37,7 +37,7 @@
       <v-row justify="space-around">
         <v-col cols="12" class="pt-0">
           <v-sheet elevation="0" class="pt-0 pb-2">
-            <v-chip-group active-class="primary--text">
+            <v-chip-group>
               <v-chip
                 v-for="schTerm in rcntSrchTerms"
                 :key="schTerm.id"

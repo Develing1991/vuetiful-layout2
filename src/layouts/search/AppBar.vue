@@ -8,26 +8,28 @@
       <v-container fluid>
         <v-row justify="center" align="center">
           <v-col cols="1" class="px-0">
-            <v-icon class="mt-1" @click="$router.push({ path: '/' })"
-              >mdi-arrow-left</v-icon
-            >
+            <v-icon class="mt-1" @click="sSearchBack">mdi-arrow-left</v-icon>
             <!-- >mdi-chevron-left -->
           </v-col>
           <v-col cols="10" class="px-0">
             <v-text-field
+              hide-details
               outlined
-              class="px-1 pt-7"
+              class="px-1"
               dense
               color="111"
-              ref="SearchInput"
               placeholder="검색어 입력"
-              v-model="searchText"
+              v-model="searchTerm"
               @keydown.enter="doSearch()"
+              @focus="$router.push({ path: '/search/rcnt' })"
             >
+              <!-- @blur="$router.go(-1)" -->
+              <!-- @focus="$router.push({ path: '/search/rcnt' })"
+              @blur="$router.push({ name: 'SearchView' })" -->
               <v-icon
                 slot="append"
                 :class="{ 'd-none': hasText }"
-                @click="removeSearchText()"
+                @click="removeSearchTerm()"
               >
                 mdi-close-circle
               </v-icon>
@@ -49,27 +51,32 @@
     name: 'SearchAppBar',
     data() {
       return {
-        searchText: '',
+        searchTerm: '',
       };
     },
     computed: {
       hasText() {
-        return !(this.searchText.length > 0);
+        return !(this.searchTerm.length > 0);
       },
     },
     methods: {
-      removeSearchText() {
-        this.searchText = '';
+      removeSearchTerm() {
+        this.searchTerm = '';
       },
       doSearch() {
         this.$router.push({
           name: 'ProductList', //path:'/product/list' 이건 안먹힘 (공식문서참조)
-          params: { searchText: this.searchText },
+          params: { searchTerm: this.searchTerm },
         });
+      },
+      sSearchBack() {
+        this.searchTerm = '';
+        this.$router.go(-1);
+        // this.$router.push({ path: '/search' });
       },
     },
     mounted() {
-      this.$refs.SearchInput.focus();
+      //this.$refs.SearchInput.focus();
     },
   };
 </script>
