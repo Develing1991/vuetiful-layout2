@@ -124,8 +124,9 @@
       <transition name="slide-fade">
         <v-btn
           v-if="scrollShow"
-          color="grey lighten-3"
-          class="mb-16"
+          color="grey lighten-3 "
+          elevation="3"
+          :style="`margin-bottom:${this.$vuetify.application.top + 10}px`"
           fab
           small
           fixed

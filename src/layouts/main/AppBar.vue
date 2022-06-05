@@ -1,13 +1,17 @@
 <template>
-  <CommonAppBar />
+  <AppBar>
+    <CommonMainAppBar />
+  </AppBar>
 </template>
 
 <script>
-  import CommonAppBar from '@/layouts/common/appbar/MainAppBar.vue';
+  import CommonMainAppBar from '@/layouts/common/appbar/MainAppBar.vue';
+  import AppBar from '@/layouts/common/AppBar.vue';
   export default {
     name: 'MainAppBar',
     components: {
-      CommonAppBar,
+      CommonMainAppBar,
+      AppBar,
     },
   };
 </script>
