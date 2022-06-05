@@ -1,6 +1,6 @@
 <template>
   <v-footer>
-    <v-bottom-navigation :value="value" color="primary" grow fixed fluid>
+    <v-bottom-navigation :value="value" color="primary" grow fixed fluid app>
       <v-btn to="/category/view">
         <span>카테고리</span>
         <v-icon>mdi-menu</v-icon>

@@ -81,7 +81,7 @@
           </v-tabs-items>
         </v-card>
         <!-- 하단 푸터 픽스 -->
-        <v-footer v-bind="localAttrs" fluid class="px-0">
+        <v-footer v-bind="localAttrs" fluid class="px-0" app>
           <v-card width="100%" class="grey lighten-3 text-center" outlined>
             <v-card-text class="white--text">
               <v-row justify="center" align="center">
