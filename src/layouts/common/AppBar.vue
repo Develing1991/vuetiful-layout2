@@ -1,5 +1,5 @@
 <template>
-  <div id="parentAppbar">
+  <div>
     <slot></slot>
   </div>
 </template>

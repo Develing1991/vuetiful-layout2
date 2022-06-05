@@ -35,7 +35,7 @@
           offset: 0, //this.offset,
           easing: 'linear', //this.easing, easeInOutCubic
         };
-        const target = document.querySelector('#parentAppbar');
+        const target = document.querySelector('#app');
 
         this.$vuetify.goTo(target, options);
       },
