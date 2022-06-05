@@ -1,15 +1,9 @@
 <template>
-  <HomeView />
+  <div>mainView</div>
 </template>
 
 <script>
-  import HomeView from '@/views/HomeView.vue';
-
   export default {
-    name: 'HomeView',
-
-    components: {
-      HomeView,
-    },
+    name: 'MainView',
   };
 </script>
