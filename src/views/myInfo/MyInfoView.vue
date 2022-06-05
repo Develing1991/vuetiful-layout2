@@ -46,16 +46,22 @@
             <v-container>
               <v-row>
                 <v-col cols="12" class="pa-0 pb-1">
-                  <v-img
+                  <v-avatar :color="menu.color">
+                    <v-icon class="white--text">{{ menu.icon }}</v-icon>
+                  </v-avatar>
+
+                  <!-- <v-img
                     src="https://cdn.vuetifyjs.com/images/john.jpg"
                     alt="John"
                     width="50"
                     height="50"
                     class="d-inline-block"
                   >
-                  </v-img>
+                  </v-img> -->
                 </v-col>
-                <v-col cols="12" class="pa-0 pt-1"> {{ menu.name }} </v-col>
+                <v-col cols="12" class="pa-0 pt-1 text-caption">
+                  {{ menu.name }}
+                </v-col>
               </v-row>
             </v-container>
           </v-btn>
@@ -63,17 +69,16 @@
         </v-col>
       </v-row>
     </v-container>
-
     <!-- 광고 -->
     <v-list class="mb-2 py-0">
       <div v-for="item in addBanners" :key="item.id">
         <v-list-item ripple>
           <template>
-            <v-list-item-content
-              ><v-img
+            <v-list-item-content>
+              <v-img
+                :aspect-ratio="400 / 50"
                 :src="item.url"
                 :alt="`banner-${item.id}`"
-                height="40"
               ></v-img>
             </v-list-item-content>
 
@@ -117,28 +122,53 @@
       addBanners: [
         {
           id: 1,
-          url: 'https://i.pinimg.com/originals/f7/64/d8/f764d8c6889b701cdd870e1688506375.jpg',
+          url: 'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg',
         },
         {
           id: 2,
-          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7PJieFvWT_VNvlPeUAT-XNtCjLB-xmbVbxYYHMr2KFoDVAaF3O7gw5a-pYrW4GJ8RA&usqp=CAU',
+          url: 'https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_960_720.jpg',
         },
       ],
       subMenus: [
         {
           id: 'm1',
           menus: [
-            { id: 1, name: '포인트' },
-            { id: 2, name: '쿠폰함' },
-            { id: 3, name: '선물함' },
+            {
+              id: 1,
+              name: '포인트',
+              icon: 'mdi-file-powerpoint-box-outline',
+              color: 'yellow darken-2',
+            },
+            {
+              id: 2,
+              name: '쿠폰함',
+              icon: 'mdi-package-variant',
+              color: 'orange darken-3',
+            },
+            {
+              id: 3,
+              name: '선물함',
+              icon: 'mdi-gift-open-outline',
+              color: 'primary lighten-1',
+            },
           ],
         },
         {
           id: 'm2',
           menus: [
-            { id: 4, name: '찜' },
-            { id: 5, name: '주문내역' },
-            { id: 6, name: '리뷰관리' },
+            { id: 4, name: '찜', icon: 'mdi-heart-outline', color: 'red' },
+            {
+              id: 5,
+              name: '주문내역',
+              icon: 'mdi-clipboard-list-outline',
+              color: 'secondary',
+            }, //mdi-clipboard-text-outline
+            {
+              id: 6,
+              name: '리뷰관리',
+              icon: 'mdi-comment-edit-outline',
+              color: 'teal lighten-2',
+            },
           ],
         },
       ],

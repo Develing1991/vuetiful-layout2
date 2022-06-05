@@ -9,7 +9,7 @@
       active-class="primary"
     >
       <v-tab
-        class="px-1"
+        class="px-2"
         style="justify-content: left"
         v-for="category in categories"
         :key="category.id"
