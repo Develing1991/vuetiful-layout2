@@ -55,6 +55,31 @@
         </v-row>
       </v-container>
     </v-app-bar>
+
+    <v-snackbar
+      v-model="snackbar"
+      :width="$vuetify.breakpoint.width - 50"
+      :timeout="3000"
+      :style="`margin-bottom:${this.$vuetify.application.bottom + 10}px`"
+      color="secondary lighten-1"
+      elevation="0"
+      height="50"
+      rounded="pill"
+      transition="fade-transition"
+    >
+      검색어를 입력하시고 다시 시도해주세요.
+      <!-- <template v-slot:action="{ attrs }">
+        <v-btn
+          color="white"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+          x-small
+        >
+          확인
+        </v-btn>
+      </template> -->
+    </v-snackbar>
   </v-card>
 </template>
 
@@ -64,6 +89,7 @@
     data() {
       return {
         searchTerm: '',
+        snackbar: false,
       };
     },
     computed: {
@@ -82,6 +108,10 @@
         this.searchTerm = '';
       },
       doSearch() {
+        if (!this.searchTerm) {
+          this.snackbar = true;
+          return;
+        }
         this.$router.push({
           name: 'ProductList', //path:'/product/list' 이건 안먹힘 (공식문서참조)
           params: { searchTerm: this.searchTerm },
@@ -111,6 +141,8 @@
       //searchTerm 은 state에서 관리하는게 좋음
       this.searchTerm = this.$route.params.searchTerm ?? '';
 
+      // console.log(this.$vuetify.application.top);
+      // console.log(this.$vuetify.application.bottom);
       if (this.$route.name === 'SearchRcntView') {
         this.$refs.SearchField.focus();
       }
