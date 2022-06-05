@@ -1,6 +1,6 @@
 <template>
   <AppBar
-    ><v-card id="wishAppbar">
+    ><v-card>
       <v-app-bar app color="white elevation-1">
         <v-container fluid>
           <v-row justify="center" align="center">

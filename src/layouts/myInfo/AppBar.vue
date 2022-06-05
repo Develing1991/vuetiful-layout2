@@ -1,6 +1,6 @@
 <template>
   <AppBar>
-    <v-card id="wishAppbar">
+    <v-card>
       <v-app-bar app color="white elevation-1">
         <v-container fluid>
           <v-row justify="space-between" align="center">
@@ -24,7 +24,7 @@
 <script>
   import AppBar from '@/layouts/common/AppBar.vue';
   export default {
-    name: 'WishAppBar',
+    name: 'MyInfoAppBar',
     components: {
       AppBar,
     },
