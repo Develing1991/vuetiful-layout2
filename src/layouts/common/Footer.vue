@@ -1,5 +1,5 @@
 <template>
-  <v-footer>
+  <v-footer class="pb-0">
     <v-bottom-navigation :value="value" color="primary" grow fixed fluid app>
       <v-btn to="/category/view">
         <span>카테고리</span>

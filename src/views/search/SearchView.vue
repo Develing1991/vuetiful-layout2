@@ -2,10 +2,10 @@
   <div>
     <v-container>
       <v-row>
-        <v-col cols="11" class="font-weight-bold subtitle-2 py-0 mt-5">
+        <v-col cols="10" class="font-weight-bold subtitle-2 py-0 mt-5">
           최근 검색어
         </v-col>
-        <v-col cols="1" class="pl-0 pt-0 mt-4">
+        <v-col cols="1" class="pl-2 pt-0 mt-4">
           <v-menu transition="slide-y-transition" bottom :offset-y="true">
             <template v-slot:activator="{ on, attrs }">
               <v-btn
@@ -33,6 +33,7 @@
 
           <!-- <v-icon>mdi-dots-vertical</v-icon> -->
         </v-col>
+        <v-col cols="1" class="px-0"> </v-col>
       </v-row>
       <v-row justify="space-around">
         <v-col cols="12" class="pt-0">

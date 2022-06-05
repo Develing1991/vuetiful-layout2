@@ -1,7 +1,7 @@
 <template>
-  <v-card color="white">
+  <v-card color="white elevation-0">
     <v-tabs
-      height="700"
+      :height="$vuetify.breakpoint.height"
       vertical
       hide-slider
       background-color="transparent"
@@ -116,6 +116,7 @@
     mounted() {
       //console.log(document.getElementsByClassName('v-tabs-items'));
       console.log(this.$vuetify);
+
       document.getElementsByClassName('v-tabs-items')[0].style.borderLeft =
         '1px solid rgba(0, 0, 0, 0.12)';
     },
