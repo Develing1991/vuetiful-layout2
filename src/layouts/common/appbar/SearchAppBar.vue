@@ -18,6 +18,7 @@
               v-model="searchTerm"
               @keydown.enter="doSearch()"
               @focus="focusSearchInput()"
+              ref="SearchField"
             >
               <!-- clearable -->
               <v-icon
@@ -91,6 +92,9 @@
           case 'SearchView': //검색뷰에서 인풋에 포커스 시 최근검색 뷰로
             this.$router.push({ name: 'SearchRcntView' });
             break;
+          case 'ProductDetail': //검색뷰에서 인풋에 포커스 시 최근검색 뷰로
+            this.$router.push({ name: 'SearchRcntView' });
+            break;
           case 'ProductList': //상품리스트 뷰에서 인풋에 포커스 시 뒤로가기 -1 (최근검색 뷰로)
             this.$router.go(-1);
             break;
@@ -106,6 +110,10 @@
 
       //searchTerm 은 state에서 관리하는게 좋음
       this.searchTerm = this.$route.params.searchTerm ?? '';
+
+      if (this.$route.name === 'SearchRcntView') {
+        this.$refs.SearchField.focus();
+      }
     },
   };
 </script>
