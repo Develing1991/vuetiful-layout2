@@ -21,54 +21,48 @@
       </v-list-item>
       <v-divider></v-divider>
     </v-list>
-
     <!-- 서브메뉴 -->
-    <v-list class="mb-2 py-0">
-      <div v-for="subMenu in subMenus" :key="subMenu.id">
-        <v-row no-gutters>
-          <v-col cols="4" v-for="menu in subMenu.menus" :key="menu.id">
-            <v-list-item ripple class="px-0 py-0">
-              <!-- <v-list-item-content style="justify-content: center">
-                {{ menu.name }}
-              </v-list-item-content> -->
-
-              <v-btn
-                value="left"
-                large
-                text
-                outlined
-                width="100%"
-                height="100"
-                tile
-                class="px-0"
-                :retain-focus-on-click="true"
-              >
-                <!-- <span style="position: relative; bottom: 10px">Favorites</span> -->
-                <v-btn :ripple="false" absolute icon class="mb-5">
-                  <!-- <v-avatar>
-                    <v-img
-                      src="https://cdn.vuetifyjs.com/images/john.jpg"
-                      alt="John"
-                    >
-                    </v-img>
-                  </v-avatar> -->
+    <v-container class="mb-2 py-0 px-0">
+      <v-divider></v-divider>
+      <v-row no-gutters v-for="subMenu in subMenus" :key="subMenu.id">
+        <v-col
+          class="px-0"
+          cols="4"
+          v-for="(menu, index) in subMenu.menus"
+          :key="menu.id"
+        >
+          <v-btn
+            style="background-color: white"
+            width="100%"
+            height="100"
+            tile
+            class="elevation-0"
+            :style="
+              subMenu.menus.length - 1 === index
+                ? ''
+                : `border-right: 1px solid rgba(0, 0, 0, 0.12)`
+            "
+          >
+            <v-container>
+              <v-row>
+                <v-col cols="12" class="pa-0 pb-1">
                   <v-img
                     src="https://cdn.vuetifyjs.com/images/john.jpg"
                     alt="John"
                     width="50"
                     height="50"
+                    class="d-inline-block"
                   >
                   </v-img>
-                </v-btn>
-                <v-btn :ripple="false" absolute top text width="100%">{{
-                  menu.name
-                }}</v-btn>
-              </v-btn>
-            </v-list-item>
-          </v-col>
-        </v-row>
-      </div>
-    </v-list>
+                </v-col>
+                <v-col cols="12" class="pa-0 pt-1"> {{ menu.name }} </v-col>
+              </v-row>
+            </v-container>
+          </v-btn>
+          <v-divider></v-divider>
+        </v-col>
+      </v-row>
+    </v-container>
 
     <!-- 광고 -->
     <v-list class="mb-2 py-0">
