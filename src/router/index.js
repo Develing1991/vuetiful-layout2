@@ -121,6 +121,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "my" */ '@/views/my/MyInfoView.vue'),
       },
+      // {
+      //   path: 'info',
+      //   name: { title: '내 정보', direction: 'ss' },
+      //   component: () =>
+      //     import(/* webpackChunkName: "my" */ '@/views/my/MyInfoView.vue'),
+      // },
     ],
   },
   {
