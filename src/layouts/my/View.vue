@@ -5,7 +5,7 @@
 <script>
   import CommonView from '@/layouts/common/View.vue';
   export default {
-    name: 'ProductIndexView',
+    name: 'MyIndexView',
     components: {
       CommonView,
     },

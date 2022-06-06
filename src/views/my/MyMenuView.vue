@@ -1,7 +1,7 @@
 <template>
   <div class="grey lighten-4">
     <v-list class="mb-2 py-0">
-      <v-list-item ripple>
+      <v-list-item ripple @click="$router.push({ name: '내 정보' })">
         <template>
           <v-list-item-avatar>
             <v-img

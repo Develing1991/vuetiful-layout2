@@ -11,7 +11,7 @@
               <!-- >mdi-chevron-left -->
             </v-col>
             <v-col cols="auto" class="px-0 pt-5">
-              <span class="font-weight-bold">내 정보</span>
+              <span class="font-weight-bold">{{ $route.name }}</span>
             </v-col>
             <v-col cols="1" class="px-0"> </v-col>
           </v-row>
@@ -24,7 +24,7 @@
 <script>
   import AppBar from '@/layouts/common/AppBar.vue';
   export default {
-    name: 'MyInfoAppBar',
+    name: 'MyAppBar',
     components: {
       AppBar,
     },

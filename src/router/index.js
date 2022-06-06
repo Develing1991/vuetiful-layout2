@@ -105,17 +105,21 @@ const routes = [
     ],
   },
   {
-    path: '/myInfo',
-    name: 'MyInfoRoot',
-    component: () => import('@/layouts/myInfo/Index.vue'),
+    path: '/my',
+    name: 'MyRoot',
+    component: () => import('@/layouts/my/Index.vue'),
     children: [
       {
         path: 'view',
-        name: 'MyInfoView',
+        name: 'My메뉴',
         component: () =>
-          import(
-            /* webpackChunkName: "myInfo" */ '@/views/myInfo/MyInfoView.vue'
-          ),
+          import(/* webpackChunkName: "my" */ '@/views/my/MyMenuView.vue'),
+      },
+      {
+        path: 'info',
+        name: '내 정보',
+        component: () =>
+          import(/* webpackChunkName: "my" */ '@/views/my/MyInfoView.vue'),
       },
     ],
   },

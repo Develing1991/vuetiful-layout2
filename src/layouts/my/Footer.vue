@@ -5,7 +5,7 @@
 <script>
   import CommonFooter from '@/layouts/common/Footer.vue';
   export default {
-    name: 'SearchFooter',
+    name: 'MyFooter',
     components: {
       CommonFooter,
     },
