@@ -1,9 +1,76 @@
 <template>
-  <div>mainView</div>
+  <v-container>
+    <v-row>
+      <v-carousel
+        v-model="model"
+        height="200"
+        hide-delimiters
+        hide-delimiter-background
+        cycle
+        :show-arrows="false"
+      >
+        <v-carousel-item v-for="(color, i) in colors" :key="color">
+          <v-sheet :color="color" height="100%" tile>
+            <v-row class="fill-height" align="center" justify="center">
+              <div class="text-h2">Slide {{ i + 1 }}</div>
+            </v-row>
+            <v-btn
+              color="red"
+              class="white--text"
+              rounded
+              :ripple="false"
+              small
+              style="position: absolute; right: 5px; bottom: 15px"
+              >{{ i + 1 }} / {{ colors.length }}</v-btn
+            >
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
+    </v-row>
+    <v-row>
+      <v-col cols="12">
+        <v-card
+          class="mx-auto my-2"
+          tile
+          elevation="2"
+          v-for="i in 12"
+          :key="i"
+        >
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="200px"
+          ></v-img>
+
+          <v-card-title> Top western road trips </v-card-title>
+
+          <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+
+            <v-btn icon>
+              <v-icon>mdi-heart</v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+    <!-- <ScrollTopBtnCmp :scrollShow="scrollShow" /> -->
+  </v-container>
 </template>
 
 <script>
+  //  import ScrollTopBtnCmp from '@/components/ScrollTopBtnCmp.vue';
   export default {
     name: 'MainView',
+    // components: {
+    //   ScrollTopBtnCmp,
+    // },
+    data() {
+      return {
+        model: 0,
+        colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
+      };
+    },
   };
 </script>

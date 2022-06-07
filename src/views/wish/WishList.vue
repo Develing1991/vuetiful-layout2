@@ -1,35 +1,16 @@
 <template>
   <div>
     <WishItem v-for="i in 32" :key="i" />
-    <ScrollTopBtnCmp :scrollShow="scrollShow" />
   </div>
 </template>
 
 <script>
   import WishItem from '@/views/wish/WishItem.vue';
-  import ScrollTopBtnCmp from '@/components/ScrollTopBtnCmp.vue';
+
   export default {
     name: 'WishList',
     components: {
       WishItem,
-      ScrollTopBtnCmp,
-    },
-    data() {
-      return {
-        scrollShow: false,
-      };
-    },
-    methods: {
-      handleScroll() {
-        const scrollPosition =
-          window.scrollY || document.documentElement.scrollTop;
-        this.scrollShow = scrollPosition > 200 ? true : false;
-        //console.log(this.scrollShow);
-      },
-    },
-    mounted() {
-      window.addEventListener('scroll', this.handleScroll);
-      console.log(this.$route.params.searchTerm ?? ''); //nullish
     },
   };
 </script>

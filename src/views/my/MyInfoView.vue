@@ -235,7 +235,4 @@
   tbody tr:hover {
     background-color: transparent !important;
   }
-  .v-expansion-panel::before {
-    box-shadow: none;
-  }
 </style>

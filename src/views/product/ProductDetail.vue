@@ -120,19 +120,12 @@
         </v-footer>
       </v-col>
     </v-row>
-    <ScrollTopBtnCmp :scrollShow="scrollShow" />
   </v-container>
 </template>
 
 <script>
-  import ScrollTopBtnCmp from '@/components/ScrollTopBtnCmp.vue';
   export default {
-    components: {
-      ScrollTopBtnCmp,
-    },
     data: () => ({
-      scrollShow: false,
-
       tab: null,
       items: [
         {
@@ -167,18 +160,6 @@
         attrs.fixed = true;
         return attrs;
       },
-    },
-    methods: {
-      handleScroll() {
-        const scrollPosition =
-          window.scrollY || document.documentElement.scrollTop;
-        this.scrollShow = scrollPosition > 200 ? true : false;
-        //console.log(this.scrollShow);
-      },
-    },
-    mounted() {
-      window.addEventListener('scroll', this.handleScroll);
-      console.log(this.$route);
     },
   };
 </script>
