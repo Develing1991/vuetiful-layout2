@@ -1,8 +1,21 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: '/',
+    name: 'MainRoot',
+    component: () => import('@/layouts/main/Index.vue'),
+    children: [
+      {
+        path: 'index.html', //나중에 맨밑으로가게하기
+        name: 'MainView',
+        component: () => import('@/views/main/MainView.vue'),
+      },
+    ],
+  },
   {
     path: '/main',
     name: 'MainRoot',
@@ -11,8 +24,7 @@ const routes = [
       {
         path: 'view', //나중에 맨밑으로가게하기
         name: 'MainView',
-        component: () =>
-          import(/* webpackChunkName: "main" */ '@/views/main/MainView.vue'),
+        component: () => import('@/views/main/MainView.vue'),
       },
     ],
   },
@@ -24,18 +36,12 @@ const routes = [
       {
         path: 'rcntView',
         name: 'SearchRcntView',
-        component: () =>
-          import(
-            /* webpackChunkName: "search" */ '@/views/search/SearchRcntView.vue'
-          ),
+        component: () => import('@/views/search/SearchRcntView.vue'),
       },
       {
         path: 'view',
         name: 'SearchView',
-        component: () =>
-          import(
-            /* webpackChunkName: "search" */ '@/views/search/SearchView.vue'
-          ),
+        component: () => import('@/views/search/SearchView.vue'),
       },
     ],
   },
@@ -47,10 +53,7 @@ const routes = [
       {
         path: 'view',
         name: 'CategoryView',
-        component: () =>
-          import(
-            /* webpackChunkName: "category" */ '@/views/category/CategoryView.vue'
-          ),
+        component: () => import('@/views/category/CategoryView.vue'),
       },
     ],
   },
@@ -62,26 +65,17 @@ const routes = [
       {
         path: 'list',
         name: 'ProductList',
-        component: () =>
-          import(
-            /* webpackChunkName: "product" */ '@/views/product/ProductList.vue'
-          ),
+        component: () => import('@/views/product/ProductList.vue'),
       },
       {
         path: 'detail/:id',
         name: 'ProductDetail',
-        component: () =>
-          import(
-            /* webpackChunkName: "product" */ '@/views/product/ProductDetail.vue'
-          ),
+        component: () => import('@/views/product/ProductDetail.vue'),
       },
       {
         path: 'view',
         name: 'ProductView',
-        component: () =>
-          import(
-            /* webpackChunkName: "product" */ '@/views/product/ProductView.vue'
-          ),
+        component: () => import('@/views/product/ProductView.vue'),
       },
     ],
   },
@@ -93,14 +87,12 @@ const routes = [
       {
         path: 'view',
         name: 'WishView',
-        component: () =>
-          import(/* webpackChunkName: "wish" */ '@/views/wish/WishView.vue'),
+        component: () => import('@/views/wish/WishView.vue'),
       },
       {
         path: 'list',
         name: 'WishList',
-        component: () =>
-          import(/* webpackChunkName: "wish" */ '@/views/wish/WishList.vue'),
+        component: () => import('@/views/wish/WishList.vue'),
       },
     ],
   },
@@ -112,20 +104,18 @@ const routes = [
       {
         path: 'view',
         name: 'My메뉴',
-        component: () =>
-          import(/* webpackChunkName: "my" */ '@/views/my/MyMenuView.vue'),
+        component: () => import('@/views/my/MyMenuView.vue'),
       },
       {
         path: 'info',
         name: '내 정보',
-        component: () =>
-          import(/* webpackChunkName: "my" */ '@/views/my/MyInfoView.vue'),
+        component: () => import('@/views/my/MyInfoView.vue'),
       },
       // {
       //   path: 'info',
       //   name: { title: '내 정보', direction: 'ss' },
       //   component: () =>
-      //     import(/* webpackChunkName: "my" */ '@/views/my/MyInfoView.vue'),
+      //     import('@/views/my/MyInfoView.vue'),
       // },
     ],
   },
@@ -135,8 +125,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    component: () => import('../views/AboutView.vue'),
   },
 ];
 
@@ -145,5 +134,11 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-
+router.onError((error) => {
+  // if (/청크 로드 \d* 실패./i.test(error.message)) {
+  //   window.location.reload();
+  // }
+  console.log(error);
+  window.location.reload();
+});
 export default router;
