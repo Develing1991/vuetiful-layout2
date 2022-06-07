@@ -13,6 +13,7 @@ const routes = [
         path: 'index.html', //나중에 맨밑으로가게하기
         name: 'MainView',
         component: () => import('@/views/main/MainView.vue'),
+        ////* webpackChunkName: "main" */
       },
     ],
   },
@@ -111,13 +112,12 @@ const routes = [
         name: '내 정보',
         component: () => import('@/views/my/MyInfoView.vue'),
       },
-      // {
-      //   path: 'info',
-      //   name: { title: '내 정보', direction: 'ss' },
-      //   component: () =>
-      //     import('@/views/my/MyInfoView.vue'),
-      // },
     ],
+  },
+  {
+    path: '*',
+    name: 'ErrorRoot',
+    component: () => import('@/views/error/ErrorView.vue'),
   },
   {
     path: '/about',
@@ -134,11 +134,11 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-router.onError((error) => {
-  // if (/청크 로드 \d* 실패./i.test(error.message)) {
-  //   window.location.reload();
-  // }
-  console.log(error);
-  window.location.reload();
-});
+// router.onError((error) => {
+//   // if (/청크 로드 \d* 실패./i.test(error.message)) {
+//   //   window.location.reload();
+//   // }
+//   console.log(error);
+//   window.location.reload();
+// });
 export default router;
