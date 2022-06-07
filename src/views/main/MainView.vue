@@ -41,14 +41,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title> Top western road trips </v-card-title>
+          <v-card-title class="text-subtitle-2">
+            알록패치 싱글 근육통 통증완화 의료기기 적외선 조사기, 엘립시스 적용
+            하이
+          </v-card-title>
 
-          <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle>
+          <v-card-subtitle class="pb-0">
+            <div>
+              <div class="text-caption">
+                45%, <span class="text-decoration-line-through">10,000원</span>
+              </div>
+              <span class="red--text text-subtitle-1 font-weight-bold"
+                >5,500원</span
+              >
+            </div>
+          </v-card-subtitle>
 
-          <v-card-actions>
+          <v-card-actions class="pt-0">
             <v-spacer></v-spacer>
 
-            <v-btn icon>
+            <v-btn icon color="red">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
           </v-card-actions>

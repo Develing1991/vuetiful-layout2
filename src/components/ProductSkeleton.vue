@@ -37,18 +37,7 @@
 </template>
 
 <script>
-  export default {
-    // beforeRouteEnter(to, from, next) {
-    //   console.log(to);
-    //   console.log(from);
-    //   debugger;
-    //   console.log(next);
-    // },
-    // mounted() {
-    //   console.log(this.$route);
-    //   debugger;
-    // },
-  };
+  export default {};
 </script>
 
 <style></style>

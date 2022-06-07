@@ -1,16 +1,29 @@
 <template>
-  <div>
+  <div v-if="isLoading">
     <ProductItem v-for="i in 32" :key="i" />
   </div>
+  <ProductSkeleton v-else />
 </template>
 
 <script>
   import ProductItem from '@/views/product/ProductItem.vue';
-
+  import ProductSkeleton from '@/components/ProductSkeleton.vue';
   export default {
     name: 'ProductList',
     components: {
       ProductItem,
+      ProductSkeleton,
+    },
+    data() {
+      return {
+        isLoading: false,
+      };
+    },
+    mounted() {
+      this.isLoading = false;
+      setTimeout(() => {
+        this.isLoading = true;
+      }, 1000);
     },
   };
 </script>
