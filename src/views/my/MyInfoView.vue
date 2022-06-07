@@ -43,93 +43,75 @@
         </template>
       </v-list-item>
       <v-divider></v-divider>
-      <v-list-item class="px-0">
-        <v-col cols="3" class="py-0 pr-0">
-          <v-list-item-content>
-            <template>
-              <span
-                style="font-size: 0.2rem; text-align: right; visibility: hidden"
-                >라인
-                <v-icon color="primary"> mdi-chevron-right </v-icon>
-              </span>
-            </template>
-            <v-list-item-subtitle class="grey--text">
-              <span class="text-caption"> 고객명 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle class="grey--text">
-              <span class="text-caption"> 비밀번호 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle class="grey--text">
-              <span class="text-caption"> 이메일 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle class="grey--text">
-              <span class="text-caption"> 연락처 </span>
-            </v-list-item-subtitle>
-          </v-list-item-content>
-        </v-col>
-        <v-col cols="9" class="py-0"
-          ><v-list-item-content>
-            <template>
-              <span style="font-size: 0.2rem; text-align: right"
-                >정보수정
-                <v-icon color="primary"> mdi-chevron-right </v-icon>
-              </span>
-            </template>
-            <v-list-item-subtitle>
-              <span class="text-caption"> 이수한 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle>
-              <span class="text-caption"> ****** </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle>
-              <span class="text-caption"> completed0728@gmail.com </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle>
-              <span class="text-caption"> 010****8884 </span>
-            </v-list-item-subtitle>
-          </v-list-item-content></v-col
-        >
-      </v-list-item>
-      <!-- 주소 -->
+      <v-card elevation="0" class="px-4">
+        <v-simple-table dense>
+          <template v-slot:default>
+            <!-- <thead>
+              <tr>
+                <th class="text-left">Name</th>
+                <th class="text-left">Calories</th>
+              </tr>
+            </thead> -->
+            <tbody>
+              <tr v-for="(ui, index) in userInfo" :key="ui.column">
+                <td
+                  class="text-caption grey--text px-0"
+                  width="20%"
+                  style="border-bottom: none"
+                >
+                  {{ ui.column }}
+                </td>
+                <td
+                  class="text-caption"
+                  width="80%"
+                  style="border-bottom: none"
+                >
+                  {{ ui.value }}
+                  <span
+                    v-if="index === 0"
+                    style="font-size: 0.2rem; position: absolute; right: 0px"
+                    >정보수정
+                    <v-icon color="primary"> mdi-chevron-right </v-icon>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
+      </v-card>
       <v-divider></v-divider>
 
-      <v-list-item class="px-0 pr-0" three-line>
-        <v-col cols="3" class="py-0">
-          <v-list-item-content>
-            <v-list-item-subtitle class="grey--text pt-2">
-              <span class="text-caption"> 수령인 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle class="grey--text">
-              <span class="text-caption"> 주소 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle class="grey--text">
-              <span class="text-caption"> 연락처 </span>
-            </v-list-item-subtitle>
-          </v-list-item-content>
-        </v-col>
-
-        <v-col cols="9" class="py-0"
-          ><v-list-item-content>
-            <template>
-              <span style="font-size: 0.2rem; text-align: right"
-                >주소수정
-                <v-icon color="primary"> mdi-chevron-right </v-icon>
-              </span>
-            </template>
-            <v-list-item-subtitle>
-              <span class="text-caption"> 이수한 </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle>
-              <span class="text-caption">
-                [41123] 인천광역시 오지구 렛잇고 23211 에욱아파트 123동 1234호
-              </span>
-            </v-list-item-subtitle>
-            <v-list-item-subtitle>
-              <span class="text-caption"> 010****8884 </span>
-            </v-list-item-subtitle>
-          </v-list-item-content></v-col
-        >
-      </v-list-item>
+      <!-- 주소 -->
+      <v-card elevation="0" class="px-4">
+        <v-simple-table dense>
+          <template v-slot:default>
+            <tbody>
+              <tr v-for="(ua, index) in userAddr" :key="ua.column">
+                <td
+                  class="text-caption grey--text px-0"
+                  width="20%"
+                  style="border-bottom: none"
+                >
+                  {{ ua.column }}
+                </td>
+                <td
+                  class="text-caption"
+                  width="80%"
+                  style="border-bottom: none"
+                >
+                  {{ ua.value }}
+                  <span
+                    v-if="index === 0"
+                    style="font-size: 0.2rem; position: absolute; right: 0px"
+                    >주소수정
+                    <v-icon color="primary"> mdi-chevron-right </v-icon>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
+      </v-card>
     </v-list>
 
     <!-- 기타메뉴 -->
@@ -148,12 +130,28 @@
         <v-divider></v-divider>
       </div>
     </v-list>
+    <v-expansion-panels accordion>
+      <v-expansion-panel v-for="i in 2" :key="i">
+        <v-expansion-panel-header
+          class="px-4 elevation-0"
+          expand-icon="mdi-chevron-right"
+          >gd</v-expansion-panel-header
+        >
+        <v-expansion-panel-content class="elevation-0">
+          <v-switch
+            v-model="switch1"
+            :label="`Switch 1: ${switch1.toString()}`"
+          ></v-switch>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </div>
 </template>
 
 <script>
   export default {
     data: () => ({
+      switch1: true,
       others: [
         { id: 1, title: '푸시설정' },
         { id: 2, title: '맞춤 설정' },
@@ -211,6 +209,21 @@
           ],
         },
       ],
+      userInfo: [
+        { column: '고객명', value: '이수한' },
+        { column: '비밀번호', value: '*******' },
+        { column: '이메일', value: 'completed0728@gmail.com' },
+        { column: '연락처', value: '010****8884' },
+      ],
+      userAddr: [
+        { column: '수령인', value: '이수한' },
+        {
+          column: '주소',
+          value:
+            '[41123] 인천광역시 오지구 렛잇고 23211 에욱아파트 123동 1234호',
+        },
+        { column: '연락처', value: '010****8884' },
+      ],
     }),
     mounted() {
       //debugger;
@@ -218,4 +231,11 @@
   };
 </script>
 
-<style></style>
+<style>
+  tbody tr:hover {
+    background-color: transparent !important;
+  }
+  .v-expansion-panel::before {
+    box-shadow: none;
+  }
+</style>
