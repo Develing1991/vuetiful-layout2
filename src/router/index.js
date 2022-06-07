@@ -15,6 +15,11 @@ const routes = [
         component: () => import('@/views/main/MainView.vue'),
         ////* webpackChunkName: "main" */
       },
+      {
+        path: '', //나중에 맨밑으로가게하기
+        name: 'MainView',
+        component: () => import('@/views/main/MainView.vue'),
+      },
     ],
   },
   {
