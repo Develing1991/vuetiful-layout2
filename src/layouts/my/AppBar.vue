@@ -11,7 +11,7 @@
               <!-- >mdi-chevron-left -->
             </v-col>
             <v-col cols="auto" class="px-0 pt-5">
-              <span class="font-weight-bold">{{ $route.name }}</span>
+              <span class="font-weight-bold">{{ $route.meta.appbarName }}</span>
             </v-col>
             <v-col cols="1" class="px-0"> </v-col>
           </v-row>
@@ -27,6 +27,10 @@
     name: 'MyAppBar',
     components: {
       AppBar,
+    },
+    mounted() {
+      console.log(this.$route);
+      //console.log(this.$router);
     },
   };
 </script>

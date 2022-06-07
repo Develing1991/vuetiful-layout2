@@ -54,6 +54,7 @@ const routes = [
       {
         path: 'view',
         name: 'CategoryView',
+        meta: { appbarName: '카테고리' },
         component: () => import('@/views/category/CategoryView.vue'),
       },
     ],
@@ -88,13 +89,15 @@ const routes = [
       {
         path: 'view',
         name: 'WishView',
+        meta: { appbarName: '찜 리스트' },
         component: () => import('@/views/wish/WishView.vue'),
       },
-      {
-        path: 'list',
-        name: 'WishList',
-        component: () => import('@/views/wish/WishList.vue'),
-      },
+      // {
+      //   path: 'list',
+      //   name: 'WishList',
+      //   meta: { appbarName: '찜 리스트' },
+      //   component: () => import('@/views/wish/WishList.vue'),
+      // },
     ],
   },
   {
@@ -104,12 +107,14 @@ const routes = [
     children: [
       {
         path: 'view',
-        name: 'My메뉴',
+        name: 'MyMenu',
+        meta: { appbarName: 'My메뉴' },
         component: () => import('@/views/my/MyMenuView.vue'),
       },
       {
         path: 'info',
-        name: '내 정보',
+        name: 'MyInfo',
+        meta: { appbarName: '내 정보' },
         component: () => import('@/views/my/MyInfoView.vue'),
       },
     ],
