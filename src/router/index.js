@@ -133,7 +133,45 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+  // scrollBehavior(to, from, savedPosition) {
+  //   console.log(to);
+  //   console.log(from);
+  //   console.log(savedPosition);
+  //   return { x: 100, y: 300 };
+  // },
 });
+
+//글로벌 비포 가드
+// router.beforeEach((to, from, next) => {
+//   if(to.name === 'My메뉴'){
+//     로그인페이지 이동
+// 메타 데이터를 이용한 로그인 분기처리 https://v3.router.vuejs.org/guide/advanced/meta.html
+//     next({ path: '/login' })
+//   }else{
+//     next()
+//   }
+//   console.log(to);
+//   console.log(from);
+// });
+
+//글로벌 애프터 가드
+// router.afterEach((to, from) => {
+//   // ...
+// })
+
+//루트별가드
+// const router = new VueRouter({
+//   routes: [
+//     {
+//       path: '/foo',
+//       component: Foo,
+//       beforeEnter: (to, from, next) => {
+//         // ...
+//       }
+//     }
+//   ]
+// })
+
 // router.onError((error) => {
 //   // if (/청크 로드 \d* 실패./i.test(error.message)) {
 //   //   window.location.reload();
