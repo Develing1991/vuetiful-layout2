@@ -4,6 +4,12 @@ import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
 
+//import Vuelidate from 'vuelidate';
+//Vue.use(Vuelidate);
+
+import VueCompositionAPI from '@vue/composition-api';
+Vue.use(VueCompositionAPI);
+
 Vue.config.productionTip = false;
 
 new Vue({
