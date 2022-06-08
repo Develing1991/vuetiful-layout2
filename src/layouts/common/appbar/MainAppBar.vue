@@ -37,8 +37,8 @@
           fixed-tabs
           class="px-0"
           show-arrows
-          color="primary"
-          slider-color="primary"
+          color="black"
+          slider-color="black"
         >
           <v-tab class="ml-0 px-0">홈</v-tab>
           <v-tab class="px-0">신규</v-tab>
