@@ -6,25 +6,26 @@
         height="200"
         hide-delimiters
         hide-delimiter-background
+        class="mt-1"
         cycle
         :show-arrows="false"
+        @change="crsl_cnt = $event + 1"
       >
         <v-carousel-item v-for="(color, i) in colors" :key="color">
           <v-sheet :color="color" height="100%" tile>
             <v-row class="fill-height" align="center" justify="center">
               <div class="text-h2">Slide {{ i + 1 }}</div>
             </v-row>
-            <v-btn
-              color="red"
-              class="white--text"
-              rounded
-              :ripple="false"
-              small
-              style="position: absolute; right: 5px; bottom: 15px"
-              >{{ i + 1 }} / {{ colors.length }}</v-btn
-            >
           </v-sheet>
         </v-carousel-item>
+        <div
+          class="white--text rounded-pill black text-no-wrap px-3 py-1 text-body-2"
+          rounded
+          small
+          style="position: absolute; right: 5px; bottom: 15px"
+        >
+          {{ crsl_cnt }} / {{ colors.length }}
+        </div>
       </v-carousel>
     </v-row>
     <v-row>
@@ -80,6 +81,7 @@
     // },
     data() {
       return {
+        crsl_cnt: 1,
         model: 0,
         colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
       };
