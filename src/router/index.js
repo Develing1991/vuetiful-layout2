@@ -125,6 +125,25 @@ const routes = [
     ],
   },
   {
+    path: '/auth',
+    name: 'AuthRoot',
+    component: () => import('@/layouts/auth/Index.vue'),
+    children: [
+      {
+        path: 'signin',
+        name: 'SignInView',
+        meta: { appbarName: '로그인' },
+        component: () => import('@/views/auth/SignInView.vue'),
+      },
+      {
+        path: 'signup',
+        name: 'SignUpView',
+        meta: { appbarName: '회원가입' },
+        component: () => import('@/views/auth/SignUpView.vue'),
+      },
+    ],
+  },
+  {
     path: '*',
     name: 'ErrorRoot',
     component: () => import('@/views/error/ErrorView.vue'),

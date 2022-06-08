@@ -2,7 +2,10 @@
   <v-container class="px-3">
     <v-row justify="space-around" class="px-0">
       <v-col cols="11" class="px-0">
-        <div style="text-align: center" class="font-weight-bold text-h4 mb-3">
+        <div
+          style="text-align: center"
+          class="font-weight-bold text-h4 mb-3 mt-3"
+        >
           LOG IN
         </div>
         <!-- <div>
@@ -15,8 +18,8 @@
           </v-img>
         </div> -->
 
-        <div>
-          <ValidationObserver v-slot="{ invalid }">
+        <div class="mt-5">
+          <ValidationObserver>
             <v-form>
               <ValidationProvider
                 name="이메일"
@@ -61,27 +64,29 @@
               </ValidationProvider>
               <v-checkbox
                 v-model="checkEmailSave"
-                label="이메일 저장"
+                label="이메일 저장 또는 자동로그인 둘중 하나로 ㄱㄱ"
                 color="teal"
                 value="Y"
                 class="mt-0"
                 hide-details
               ></v-checkbox>
 
-              <v-btn
-                type="submit"
-                :disabled="invalid"
-                class="mt-5"
-                color="teal"
-                width="100%"
-                large
-              >
+              <!-- :disabled="invalid" -->
+              <v-btn type="submit" class="mt-5" color="teal" width="100%" large>
                 <div class="text-subtitle-1 white--text">로그인</div>
               </v-btn>
             </v-form>
           </ValidationObserver>
-          <v-btn type="submit" class="mt-5" color="primary" width="100%" large>
-            <div class="text-subtitle-1 white--text">회원가입</div>
+          <v-btn
+            type="submit"
+            class="mt-5"
+            color="teal"
+            width="100%"
+            outlined
+            large
+            @click="$router.push({ name: 'SignUpView' })"
+          >
+            <div class="text-subtitle-1">회원가입</div>
           </v-btn>
         </div>
       </v-col>
