@@ -1,53 +1,69 @@
 <template>
-  <div>
-    <v-list class="py-0" v-for="i in 10" :key="i">
-      <v-list-item>
-        <v-list-item-avatar tile size="90">
-          <v-sheet
-            :color="`grey ${false ? 'darken-2' : 'lighten-4'}`"
-            width="90"
-          >
-            <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
-          </v-sheet>
-        </v-list-item-avatar>
+  <v-container>
+    <v-row justify="space-around">
+      <v-col cols="12">
+        <div class="pa-10 rounded-xl" style="border: 2px solid">
+          <div style="text-align: center" class="font-weight-bold text-h4">
+            로그인
+          </div>
 
-        <v-list-item-content>
-          <v-list-item-subtitle class="font-weight-bold mb-2 text-caption">
-            <v-sheet
-              :color="`grey ${false ? 'darken-2' : 'lighten-4'}`"
-              width="100%"
-            >
-              <v-skeleton-loader type="card-heading"></v-skeleton-loader>
-              <v-skeleton-loader
-                class="py-0"
-                type="list-item-three-line"
-              ></v-skeleton-loader>
-            </v-sheet>
-          </v-list-item-subtitle>
-          <!-- <v-skeleton-loader class="py-0" type="divider"></v-skeleton-loader> -->
-        </v-list-item-content>
-      </v-list-item>
-      <v-skeleton-loader
-        class="py-0"
-        type="divider"
-        width="100%"
-      ></v-skeleton-loader>
-    </v-list>
-  </div>
+          <form>
+            <v-text-field
+              outlined
+              dense
+              label="이메일"
+              prepend-inner-icon="mdi-email-outline"
+              clearable
+            ></v-text-field>
+            <v-text-field
+              outlined
+              dense
+              label="비밀번호"
+              prepend-inner-icon="mdi-lock-outline"
+              :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="showPass ? 'text' : 'password'"
+              @click:append="showPass = !showPass"
+              pattern="[A-Za-z]+"
+              clearable
+              @keydown="aaa($event)"
+            ></v-text-field>
+            <!-- <v-text-field
+              outlined
+              dense
+              label="비밀번호"
+              prepend-inner-icon="mdi-lock-outline"
+              :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
+              :rules="[rules.required, rules.min]"
+              :type="showPass ? 'text' : 'password'"
+              hint="At least 8 characters"
+              @click:append="showPass = !showPass"
+              clearable
+            ></v-text-field> -->
+            <input type="submit" />
+          </form>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
   export default {
-    // beforeRouteEnter(to, from, next) {
-    //   console.log(to);
-    //   console.log(from);
-    //   debugger;
-    //   console.log(next);
-    // },
-    // mounted() {
-    //   console.log(this.$route);
-    //   debugger;
-    // },
+    data() {
+      return {
+        showPass: false,
+        // rules: {
+        //   required: (value) => !!value || 'Required.',
+        //   min: (v) => v.length >= 8 || 'Min 8 characters',
+        //   emailMatch: () => `The email and password you entered don't match`,
+        // },
+      };
+    },
+    methods: {
+      aaa(event) {
+        console.log(event);
+      },
+    },
   };
 </script>
 
