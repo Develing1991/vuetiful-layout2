@@ -4,10 +4,7 @@
       <v-list-item ripple @click="$router.push({ name: 'MyInfo' })">
         <template>
           <v-list-item-avatar>
-            <v-img
-              src="https://cdn.vuetifyjs.com/images/john.jpg"
-              alt="John"
-            ></v-img>
+            <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title>LEE SU HAN</v-list-item-title>
@@ -19,11 +16,11 @@
           </v-list-item-action>
         </template>
       </v-list-item>
-      <v-divider></v-divider>
+      <v-divider />
     </v-list>
     <!-- 서브메뉴 -->
     <v-container class="mb-2 py-0 px-0">
-      <v-divider></v-divider>
+      <v-divider />
       <v-row no-gutters v-for="subMenu in subMenus" :key="subMenu.id">
         <v-col
           class="px-0"
@@ -65,7 +62,7 @@
               </v-row>
             </v-container>
           </v-btn>
-          <v-divider></v-divider>
+          <v-divider />
         </v-col>
       </v-row>
     </v-container>
@@ -79,7 +76,7 @@
                 :aspect-ratio="400 / 50"
                 :src="item.url"
                 :alt="`banner-${item.id}`"
-              ></v-img>
+              />
             </v-list-item-content>
 
             <v-list-item-action>
@@ -87,7 +84,7 @@
             </v-list-item-action>
           </template>
         </v-list-item>
-        <v-divider></v-divider>
+        <v-divider />
       </div>
     </v-list>
     <!-- 기타메뉴 -->
@@ -103,7 +100,7 @@
             </v-list-item-action>
           </template>
         </v-list-item>
-        <v-divider></v-divider>
+        <v-divider />
       </div>
     </v-list>
   </div>

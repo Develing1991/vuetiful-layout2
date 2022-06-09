@@ -33,7 +33,7 @@
 
           <!-- <v-icon>mdi-dots-vertical</v-icon> -->
         </v-col>
-        <v-col cols="1" class="px-0"> </v-col>
+        <v-col cols="1" class="px-0" />
       </v-row>
       <v-row justify="space-around">
         <v-col cols="12" class="pt-0">

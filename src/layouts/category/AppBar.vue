@@ -4,7 +4,7 @@
       <v-app-bar app color="white elevation-1">
         <v-container fluid>
           <v-row justify="space-between" align="center">
-            <v-col cols="1" class="px-0"> </v-col>
+            <v-col cols="1" class="px-0" />
 
             <v-col cols="auto" class="px-0 pt-5">
               <span class="font-weight-bold">{{ $route.meta.appbarName }}</span>

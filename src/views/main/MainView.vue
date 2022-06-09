@@ -40,7 +40,7 @@
           <v-img
             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
             height="200px"
-          ></v-img>
+          />
 
           <v-card-title class="text-subtitle-2">
             알록패치 싱글 근육통 통증완화 의료기기 적외선 조사기, 엘립시스 적용
@@ -59,7 +59,7 @@
           </v-card-subtitle>
 
           <v-card-actions class="pt-0">
-            <v-spacer></v-spacer>
+            <v-spacer />
 
             <v-btn icon color="red">
               <v-icon>mdi-heart</v-icon>

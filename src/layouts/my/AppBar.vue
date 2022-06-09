@@ -13,7 +13,7 @@
             <v-col cols="auto" class="px-0 pt-5">
               <span class="font-weight-bold">{{ $route.meta.appbarName }}</span>
             </v-col>
-            <v-col cols="1" class="px-0"> </v-col>
+            <v-col cols="1" class="px-0" />
           </v-row>
         </v-container>
       </v-app-bar>

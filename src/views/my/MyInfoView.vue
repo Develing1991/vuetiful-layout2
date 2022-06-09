@@ -36,13 +36,13 @@
             </v-list-item>
 
             <v-card-actions class="mr-3 py-0">
-              <v-spacer></v-spacer>
+              <v-spacer />
               <v-btn text small> 로그아웃 </v-btn>
             </v-card-actions>
           </v-card>
         </template>
       </v-list-item>
-      <v-divider></v-divider>
+      <v-divider />
       <v-card elevation="0" class="px-4">
         <v-simple-table dense>
           <template v-slot:default>
@@ -79,7 +79,7 @@
           </template>
         </v-simple-table>
       </v-card>
-      <v-divider></v-divider>
+      <v-divider />
 
       <!-- 주소 -->
       <v-card elevation="0" class="px-4">
@@ -127,7 +127,7 @@
             </v-list-item-action>
           </template>
         </v-list-item>
-        <v-divider></v-divider>
+        <v-divider />
       </div>
     </v-list>
     <v-expansion-panels accordion>
@@ -141,7 +141,7 @@
           <v-switch
             v-model="switch1"
             :label="`Switch 1: ${switch1.toString()}`"
-          ></v-switch>
+          />
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>

@@ -5,11 +5,7 @@
         <!-- <ProductItem :self-max-width="1000" height="700" /> -->
         <v-card class="mx-auto">
           <template slot="progress">
-            <v-progress-linear
-              color="deep-purple"
-              height="10"
-              indeterminate
-            ></v-progress-linear>
+            <v-progress-linear color="deep-purple" height="10" indeterminate />
           </template>
 
           <!-- <v-img
@@ -25,7 +21,7 @@
               v-for="(item, i) in images"
               :key="i"
               :src="item.src"
-            ></v-carousel-item>
+            />
           </v-carousel>
 
           <v-card-title
@@ -42,7 +38,7 @@
                 half-increments
                 readonly
                 size="14"
-              ></v-rating>
+              />
 
               <div class="grey--text ms-4">4.5 (413)</div>
             </v-row>
@@ -58,10 +54,10 @@
             <div>추가설명</div>
           </v-card-text>
 
-          <v-divider class="mx-4 mb-3"></v-divider>
+          <v-divider class="mx-4 mb-3" />
 
           <v-tabs fixed-tabs background-color="primary" dark v-model="tab">
-            <v-tabs-slider color="white"></v-tabs-slider>
+            <v-tabs-slider color="white" />
             <v-tab v-for="item in items" :key="item.name">
               {{ item.name }}
             </v-tab>
@@ -71,10 +67,10 @@
               <v-card flat class="mb-16">
                 <!-- <v-card-text v-text="item.text"></v-card-text> -->
                 <template v-if="item.tab_dv === 'image'">
-                  <v-img :src="item.url"></v-img>
+                  <v-img :src="item.url" />
                 </template>
                 <template v-else>
-                  <v-card-text class="mb-10" v-text="item.text"></v-card-text>
+                  <v-card-text class="mb-10" v-text="item.text" />
                 </template>
               </v-card>
             </v-tab-item>

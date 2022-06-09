@@ -12,8 +12,7 @@
         <v-list-item-avatar tile size="90" color="grey">
           <v-img
             src="https://thumbnail6.coupangcdn.com/thumbnails/remote/300x300ex/image/product/image/vendoritem/2019/02/11/3186737276/e4f9115d-ff6d-406c-8e9e-52382c5b0abc.jpg"
-          >
-          </v-img>
+          />
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-subtitle class="font-weight-bold mb-2 text-caption">
@@ -65,7 +64,7 @@
       </v-list-item>
     </v-list>
 
-    <v-divider></v-divider>
+    <v-divider />
   </div>
 </template>
 

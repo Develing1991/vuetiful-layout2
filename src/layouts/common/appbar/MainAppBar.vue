@@ -22,7 +22,7 @@
         />
       </div>
       <!-- <v-app-bar-title>Title</v-app-bar-title> -->
-      <v-spacer></v-spacer>
+      <v-spacer />
       <router-link to="/search/rcntView" class="router-link-underline-delete">
         <v-icon class="px-3">mdi-magnify</v-icon>
       </router-link>

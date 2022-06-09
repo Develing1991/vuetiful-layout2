@@ -34,7 +34,7 @@
                   outlined
                   dense
                   :error-messages="errors"
-                ></v-text-field>
+                />
               </ValidationProvider>
               <ValidationProvider
                 name="비밀번호"
@@ -60,7 +60,7 @@
                   outlined
                   dense
                   :error-messages="errors"
-                ></v-text-field>
+                />
               </ValidationProvider>
               <v-checkbox
                 v-model="checkEmailSave"
@@ -69,7 +69,7 @@
                 value="Y"
                 class="mt-0"
                 hide-details
-              ></v-checkbox>
+              />
 
               <!-- :disabled="invalid" -->
               <v-btn type="submit" class="mt-5" color="teal" width="100%" large>

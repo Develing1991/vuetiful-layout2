@@ -33,7 +33,7 @@
                 </v-list-item-action>
               </template>
             </v-list-item>
-            <v-divider></v-divider>
+            <v-divider />
           </div>
         </v-list>
       </v-tab-item>

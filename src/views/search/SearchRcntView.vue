@@ -14,12 +14,12 @@
               })
             "
           >
-            <v-list-item-title v-text="item.text"></v-list-item-title>
+            <v-list-item-title v-text="item.text" />
           </v-list-item-content>
           <v-icon @click="deleteRcnt(item.id)">mdi-close</v-icon>
         </v-list-item>
 
-        <v-divider></v-divider>
+        <v-divider />
       </div>
     </v-list-item-group>
   </v-list>

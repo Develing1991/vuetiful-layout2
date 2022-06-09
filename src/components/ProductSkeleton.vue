@@ -7,7 +7,7 @@
             :color="`grey ${false ? 'darken-2' : 'lighten-4'}`"
             width="90"
           >
-            <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
+            <v-skeleton-loader class="mx-auto" type="card" />
           </v-sheet>
         </v-list-item-avatar>
 
@@ -17,21 +17,14 @@
               :color="`grey ${false ? 'darken-2' : 'lighten-4'}`"
               width="100%"
             >
-              <v-skeleton-loader type="card-heading"></v-skeleton-loader>
-              <v-skeleton-loader
-                class="py-0"
-                type="list-item-three-line"
-              ></v-skeleton-loader>
+              <v-skeleton-loader type="card-heading" />
+              <v-skeleton-loader class="py-0" type="list-item-three-line" />
             </v-sheet>
           </v-list-item-subtitle>
           <!-- <v-skeleton-loader class="py-0" type="divider"></v-skeleton-loader> -->
         </v-list-item-content>
       </v-list-item>
-      <v-skeleton-loader
-        class="py-0"
-        type="divider"
-        width="100%"
-      ></v-skeleton-loader>
+      <v-skeleton-loader class="py-0" type="divider" width="100%" />
     </v-list>
   </div>
 </template>
