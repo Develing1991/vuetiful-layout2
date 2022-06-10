@@ -138,12 +138,12 @@
           {
             text: '아이디 찾기',
             disabled: false,
-            to: 'breadcrumbs_link_1',
+            to: 'find-id',
           },
           {
             text: '비밀번호 재설정',
             disabled: false,
-            to: 'breadcrumbs_link_1',
+            to: 'find-pass',
           },
         ],
         // rules: {

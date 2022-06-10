@@ -154,6 +154,18 @@ const routes = [
         meta: { appbarName: '회원가입' },
         component: () => import('@/views/auth/SignUpView.vue'),
       },
+      {
+        path: 'find-id',
+        name: 'FindIdView',
+        meta: { appbarName: '아이디 찾기' },
+        component: () => import('@/views/auth/private/FindIdView.vue'),
+      },
+      {
+        path: 'find-pass',
+        name: 'FindPassView',
+        meta: { appbarName: '비밀번호 찾기' },
+        component: () => import('@/views/auth/private/FindPassView.vue'),
+      },
     ],
   },
   {
