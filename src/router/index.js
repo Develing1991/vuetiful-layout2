@@ -163,7 +163,7 @@ const routes = [
       {
         path: 'find-pass',
         name: 'FindPassView',
-        meta: { appbarName: '비밀번호 찾기' },
+        meta: { appbarName: '비밀번호 재설정' },
         component: () => import('@/views/auth/private/FindPassView.vue'),
       },
     ],

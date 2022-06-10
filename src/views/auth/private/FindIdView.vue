@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <v-card outlined>
-          <v-card-title> 본인 확인 </v-card-title>
+          <v-card-title class="mb-2"> 본인 확인 </v-card-title>
           <v-card-subtitle> 인증수단을 선택해주세요. </v-card-subtitle>
           <v-card-text>
             <v-btn class="teal" outlined dark width="100%" large
@@ -16,7 +16,9 @@
     <v-row>
       <v-col>
         <v-card outlined>
-          <v-card-title> 회원정보에 등록된 휴대폰 번호 </v-card-title>
+          <v-card-title class="mb-2">
+            회원정보에 등록된 휴대폰 번호
+          </v-card-title>
           <v-card-subtitle>
             회원정보에 등록된 휴대폰 번호 회원정보에 등록된 휴대폰 번호가
             생각나지 않으시면 위의 본인 확인을 통해 아이디(이메일)를 찾아
