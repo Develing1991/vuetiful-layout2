@@ -141,6 +141,12 @@ const routes = [
         meta: { appbarName: '회원가입' },
         component: () => import('@/views/auth/SignUpView.vue'),
       },
+      {
+        path: 'signup-terms',
+        name: 'SignUpTermsView',
+        meta: { appbarName: '이용약관' },
+        component: () => import('@/views/auth/SignUpTermsView.vue'),
+      },
     ],
   },
   {
