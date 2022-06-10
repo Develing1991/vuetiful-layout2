@@ -135,17 +135,24 @@ const routes = [
         meta: { appbarName: '로그인' },
         component: () => import('@/views/auth/SignInView.vue'),
       },
-      {
-        path: 'signup',
-        name: 'SignUpView',
-        meta: { appbarName: '회원가입' },
-        component: () => import('@/views/auth/SignUpView.vue'),
-      },
+
       {
         path: 'signup-terms',
         name: 'SignUpTermsView',
         meta: { appbarName: '이용약관' },
         component: () => import('@/views/auth/SignUpTermsView.vue'),
+      },
+      {
+        path: 'signup-biz',
+        name: 'SignUpBizChkView',
+        meta: { appbarName: '사업자번호' },
+        component: () => import('@/views/auth/SignUpBizChkView.vue'),
+      },
+      {
+        path: 'signup',
+        name: 'SignUpView',
+        meta: { appbarName: '회원가입' },
+        component: () => import('@/views/auth/SignUpView.vue'),
       },
     ],
   },

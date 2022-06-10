@@ -84,7 +84,7 @@
             width="100%"
             outlined
             large
-            @click="$router.push({ name: 'SignUpView' })"
+            @click="$router.push({ name: 'SignUpTermsView' })"
           >
             <div class="text-subtitle-1">회원가입</div>
           </v-btn>

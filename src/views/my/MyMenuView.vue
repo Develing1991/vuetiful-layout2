@@ -17,6 +17,16 @@
         </template>
       </v-list-item>
       <v-divider />
+      <!-- 삭제요망 임시버튼 로그인 -->
+      <v-list-item ripple @click="$router.push({ name: 'SignInView' })">
+        <template>
+          <v-list-item-content>
+            <v-btn :ripple="false">로그인(임시)</v-btn>
+          </v-list-item-content>
+        </template>
+      </v-list-item>
+      <v-divider />
+      <!-- 삭제요망 임시버튼 로그인 -->
     </v-list>
     <!-- 서브메뉴 -->
     <v-container class="mb-2 py-0 px-0">

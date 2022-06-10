@@ -272,8 +272,7 @@
     methods: {
       nextStep() {
         console.log('next');
-        //SignUpView
-        this.$router.push({ name: 'SignUpView' });
+        this.$router.push({ name: 'SignUpBizChkView' }); //사업자번호 뷰
       },
       showTerms(termsNumber) {
         this.termsNumber = termsNumber;
