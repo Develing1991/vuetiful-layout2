@@ -1,157 +1,140 @@
 <template>
-  <v-container class="px-3">
-    <v-row justify="space-around" class="px-0">
-      <v-col cols="11" class="px-0">
-        <div style="text-align: center" class="font-weight-bold text-h4 mb-3">
-          LOG IN
-        </div>
-        <!-- <div>
-          <v-img
-            class="mx-auto"
-            src="https://bos.kkulcon.com/static/assets/img/common/logo_main.png"
-            height="55"
-            width="114"
-          >
-          </v-img>
-        </div> -->
+  <div>
+    <div>
+      <BtnTest
+        color="teal"
+        width="100%"
+        large
+        class="mt-5"
+        btnClass="text-subtitle-1 white--text"
+      >
+        로그인
+      </BtnTest>
+    </div>
+    <div>
+      <BtnTest
+        color="teal"
+        width="100%"
+        large
+        class="mt-5"
+        outlined
+        btnClass="text-subtitle-1"
+      >
+        회원가입
+      </BtnTest>
+    </div>
+    <div>
+      <BtnTest class="secondary"> 조회하기 </BtnTest>
+    </div>
+    <div>
+      <BtnTest class="primary lighten-1" width="100%" large> 구매하기 </BtnTest>
+    </div>
+    <div>
+      <BtnTest color="secondary" outlined x-small :ripple="false">
+        삭제
+      </BtnTest>
+      <BtnTest class="ml-2" color="primary" outlined x-small :ripple="false">
+        구매하기
+      </BtnTest>
+    </div>
 
-        <div>
-          <ValidationObserver v-slot="{ invalid }">
-            <v-form>
-              <ValidationProvider
-                name="이메일"
-                rules="required|email"
-                v-slot="{ errors }"
-              >
-                <v-text-field
-                  color="teal"
-                  v-model="email"
-                  label="이메일"
-                  prepend-inner-icon="mdi-email-outline"
-                  outlined
-                  dense
-                  :error-messages="errors"
-                />
-              </ValidationProvider>
-              <ValidationProvider
-                name="비밀번호"
-                rules="required"
-                v-slot="{ errors }"
-              >
-                <!-- v-slot="{ errors, invalid }" -->
-                <!-- :hide-details="!invalid" -->
-                <v-text-field
-                  v-model="password"
-                  color="teal"
-                  label="비밀번호"
-                  prepend-inner-icon="mdi-lock-outline"
-                  :append-icon="
-                    password.length > 0
-                      ? showPass
-                        ? 'mdi-eye'
-                        : 'mdi-eye-off'
-                      : ''
-                  "
-                  :type="showPass ? 'text' : 'password'"
-                  @click:append="showPass = !showPass"
-                  outlined
-                  dense
-                  :error-messages="errors"
-                />
-              </ValidationProvider>
-              <v-checkbox
-                v-model="checkEmailSave"
-                label="이메일 저장"
-                color="teal"
-                value="Y"
-                class="mt-0"
-                hide-details
-              />
+    <!-- signIn -->
+    <div>
+      <v-btn type="submit" class="mt-5" color="teal" width="100%" large>
+        <div class="text-subtitle-1 white--text">로그인</div>
+      </v-btn>
+      <v-btn
+        type="submit"
+        class="mt-5"
+        color="teal"
+        width="100%"
+        outlined
+        large
+      >
+        <div class="text-subtitle-1">회원가입</div>
+      </v-btn>
+    </div>
+    <!-- signup-terms -->
+    <div>
+      <v-btn type="submit" class="mt-5" color="teal " width="100%" large>
+        <div class="text-subtitle-1 white--text">동의하고 가입하기</div>
+      </v-btn>
+    </div>
+    <!-- signup-biz -->
+    <div>
+      <v-btn class="secondary" :disabled="invalid">조회하기</v-btn>
+      <v-btn
+        class="mt-3 mb-3 teal"
+        width="100%"
+        type="submit"
+        large
+        :disabled="dbizCheck"
+      >
+        <div class="text-subtitle-1 white--text">확인</div>
+      </v-btn>
+    </div>
 
-              <v-btn
-                type="submit"
-                :disabled="invalid"
-                class="mt-5"
-                color="teal"
-                width="100%"
-                large
-              >
-                <div class="text-subtitle-1 white--text">로그인</div>
-              </v-btn>
-            </v-form>
-          </ValidationObserver>
-          <v-btn type="submit" class="mt-5" color="primary" width="100%" large>
-            <div class="text-subtitle-1 white--text">회원가입</div>
-          </v-btn>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
-        <v-breadcrumbs
-          :items="breadcrumbs"
-          style="justify-content: center"
-          class="px-0"
-        >
-          <template v-slot:divider> | </template>
-        </v-breadcrumbs>
-      </v-col>
-    </v-row>
-  </v-container>
+    <!-- signup -->
+    <div>
+      <v-btn class="secondary">중복체크</v-btn>
+      <v-btn class="secondary">인증번호 받기</v-btn>
+      <v-btn class="secondary">인증번호 확인</v-btn>
+      <v-btn
+        class="mt-3 mb-3 teal"
+        width="100%"
+        type="submit"
+        large
+        :disabled="invalid"
+      >
+        <div class="text-subtitle-1 white--text">회원가입</div>
+      </v-btn>
+    </div>
+
+    <!-- find-id -->
+    <div>
+      <v-btn class="teal" outlined dark width="100%" large>휴대폰 인증</v-btn>
+      <v-btn color="teal" outlined dark width="100%" large>전송</v-btn>
+      <v-btn class="teal" outlined dark width="100%" large>확인</v-btn>
+    </div>
+    <!-- find-pass -->
+    <div>
+      <v-btn class="teal" outlined dark width="100%" large
+        >휴대폰으로 받기</v-btn
+      >
+      <v-btn class="teal" outlined dark width="100%" large>이메일로 받기</v-btn>
+    </div>
+
+    <!-- product/detail/12 -->
+    <div>
+      <v-btn
+        color="primary"
+        text-center
+        large
+        dark
+        width="100%"
+        class="font-weight-bold text-body-2"
+      >
+        구매하기
+      </v-btn>
+    </div>
+
+    <!-- wish/view -->
+    <div>
+      <v-btn color="secondary" dark outlined x-small :ripple="false"
+        >삭제</v-btn
+      >
+      <v-btn class="ml-2" color="primary" dark outlined x-small :ripple="false"
+        >구매하기</v-btn
+      >
+    </div>
+  </div>
 </template>
 
 <script>
-  import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
-  import { email, required } from 'vee-validate/dist/rules';
-  // extend('max', () => {
-  //   ...max
-  //   console.log('hi');
-  // });
-  extend('email', {
-    ...email,
-    message: '{_field_}형식이 올바르지 않습니다.',
-  });
-  extend('required', {
-    ...required,
-    message: '{_field_}을(를) 입력해 주세요.',
-  });
-
+  import BtnTest from '@/views/BtnTest.vue';
   export default {
-    data() {
-      return {
-        showPass: false,
-        email: '',
-        password: '',
-        checkEmailSave: '',
-        breadcrumbs: [
-          // {
-          //   text: '회원가입',
-          //   disabled: false,
-          //   to: 'breadcrumbs_dashboard',
-          //   //href: 'breadcrumbs_dashboard',
-          // },
-          {
-            text: '아이디 찾기',
-            disabled: false,
-            to: 'breadcrumbs_link_1',
-          },
-          {
-            text: '비밀번호 재설정',
-            disabled: false,
-            to: 'breadcrumbs_link_1',
-          },
-        ],
-        // rules: {
-        //   required: (value) => !!value || 'Required.',
-        //   min: (v) => v.length >= 8 || 'Min 8 characters',
-        //   emailMatch: () => `The email and password you entered don't match`,
-        // },
-      };
-    },
-
     components: {
-      ValidationProvider,
-      ValidationObserver,
+      BtnTest,
     },
   };
 </script>
