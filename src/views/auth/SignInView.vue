@@ -72,12 +72,21 @@
               />
 
               <!-- :disabled="invalid" -->
-              <v-btn type="submit" class="mt-5" color="teal" width="100%" large>
+              <!-- <v-btn type="submit" class="mt-5" color="teal" width="100%" large>
                 <div class="text-subtitle-1 white--text">로그인</div>
-              </v-btn>
+              </v-btn> -->
+              <ButtonCmp
+                color="teal"
+                width="100%"
+                large
+                class="mt-5"
+                btnTxtClass="text-subtitle-1 white--text"
+              >
+                로그인
+              </ButtonCmp>
             </v-form>
           </ValidationObserver>
-          <v-btn
+          <!-- <v-btn
             type="submit"
             class="mt-5"
             color="teal"
@@ -87,7 +96,18 @@
             @click="$router.push({ name: 'SignUpTermsView' })"
           >
             <div class="text-subtitle-1">회원가입</div>
-          </v-btn>
+          </v-btn> -->
+          <ButtonCmp
+            color="teal"
+            width="100%"
+            large
+            class="mt-5"
+            outlined
+            btnTxtClass="text-subtitle-1"
+            @click="$router.push({ name: 'SignUpTermsView' })"
+          >
+            회원가입
+          </ButtonCmp>
         </div>
       </v-col>
     </v-row>
@@ -108,6 +128,7 @@
 <script>
   import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
   import { email, required } from 'vee-validate/dist/rules';
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   // extend('max', () => {
   //   ...max
   //   console.log('hi');
@@ -157,6 +178,7 @@
     components: {
       ValidationProvider,
       ValidationObserver,
+      ButtonCmp,
     },
   };
 </script>

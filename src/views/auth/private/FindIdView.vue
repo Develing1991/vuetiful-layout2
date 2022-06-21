@@ -6,9 +6,15 @@
           <v-card-title class="mb-2"> 본인 확인 </v-card-title>
           <v-card-subtitle> 인증수단을 선택해주세요. </v-card-subtitle>
           <v-card-text>
-            <v-btn class="teal" outlined dark width="100%" large
-              >휴대폰 인증</v-btn
+            <ButtonCmp
+              color="teal"
+              width="100%"
+              large
+              class="mt-5"
+              btnTxtClass="white--text"
             >
+              휴대폰 인증
+            </ButtonCmp>
           </v-card-text>
         </v-card>
       </v-col>
@@ -55,16 +61,16 @@
                   :error-messages="errors"
                 />
               </ValidationProvider>
-
-              <v-btn
+              <ButtonCmp
                 color="teal"
-                outlined
-                dark
                 width="100%"
                 large
+                class="mt-5"
+                outlined
                 @click="sendMsg"
-                >전송</v-btn
               >
+                전송
+              </ButtonCmp>
             </ValidationObserver>
           </v-card-text>
 
@@ -87,16 +93,16 @@
                     @keydown="clickBtn = false"
                   />
                 </ValidationProvider>
-
-                <v-btn
-                  class="teal"
-                  outlined
-                  dark
+                <ButtonCmp
+                  color="teal"
                   width="100%"
                   large
+                  class="mt-5"
+                  btnTxtClass="white--text"
                   @click="confirmAuthNumber"
-                  >확인</v-btn
                 >
+                  확인
+                </ButtonCmp>
               </ValidationObserver>
             </v-card-text>
           </template>
@@ -108,8 +114,8 @@
 
 <script>
   import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
-
   import { email, required, numeric, is } from 'vee-validate/dist/rules';
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   // extend('max', () => {
   //   ...max
   //   console.log('hi');
@@ -134,6 +140,7 @@
     components: {
       ValidationProvider,
       ValidationObserver,
+      ButtonCmp,
     },
     created() {},
     data() {

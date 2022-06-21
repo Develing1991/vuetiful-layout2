@@ -193,16 +193,16 @@
         </v-list>
       </div>
     </v-list>
-    <v-btn
-      type="submit"
-      class="mt-5"
-      color="teal "
+    <ButtonCmp
+      color="teal"
       width="100%"
       large
+      class="mt-5"
       @click="nextStep()"
+      btnTxtClass="text-subtitle-1 white--text"
     >
-      <div class="text-subtitle-1 white--text">동의하고 가입하기</div>
-    </v-btn>
+      동의하고 가입하기
+    </ButtonCmp>
     <TermsDialogCmp
       :dialog="dialog"
       :termsNumber="termsNumber"
@@ -213,9 +213,11 @@
 </template>
 <script>
   import TermsDialogCmp from '@/components/dialog/TermsDialogCmp.vue';
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   export default {
     components: {
       TermsDialogCmp,
+      ButtonCmp,
     },
     data() {
       return {

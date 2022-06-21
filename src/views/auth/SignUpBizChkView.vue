@@ -50,23 +50,24 @@
             </validation-provider>
           </v-list-item-content>
           <v-list-item-action class="mb-7 ml-2">
-            <v-btn class="secondary" :disabled="invalid" @click="mbizCheck"
-              >조회하기</v-btn
-            >
+            <ButtonCmp color="secondary" :disabled="invalid" @click="mbizCheck">
+              조회하기
+            </ButtonCmp>
           </v-list-item-action>
         </v-list-item>
       </v-list>
     </validation-observer>
-    <v-btn
-      class="mt-3 mb-3 teal"
+    <ButtonCmp
+      color="teal"
       width="100%"
-      type="submit"
       large
+      class="mt-3 mb-3"
+      btnTxtClass="text-subtitle-1 white--text"
       :disabled="dbizCheck"
       @click="next"
     >
-      <div class="text-subtitle-1 white--text">확인</div>
-    </v-btn>
+      확인
+    </ButtonCmp>
     <template>
       <div>
         <v-alert type="success" v-if="!dbizCheck">
@@ -81,6 +82,7 @@
 
 <script>
   import { required, digits, max, regex } from 'vee-validate/dist/rules';
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   import {
     extend,
     ValidationObserver,
@@ -114,6 +116,7 @@
     components: {
       ValidationProvider,
       ValidationObserver,
+      ButtonCmp,
     },
     data: () => ({
       name: '',

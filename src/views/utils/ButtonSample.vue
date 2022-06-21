@@ -42,9 +42,7 @@
       <ButtonCmp color="secondary" class="float-right" disabled>
         조회하기
       </ButtonCmp>
-      <ButtonCmp color="secondary" class="float-right mr-3">
-        조회하기
-      </ButtonCmp>
+      <ButtonCmp color="secondary" class="float-right"> 조회하기 </ButtonCmp>
     </div>
     <div>
       <ButtonCmp color="primary lighten-1" width="100%" large>

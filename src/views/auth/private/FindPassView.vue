@@ -43,26 +43,26 @@
               </ValidationProvider>
               <v-row>
                 <v-col cols="6">
-                  <v-btn
-                    class="teal"
-                    outlined
-                    dark
+                  <ButtonCmp
+                    color="teal"
                     width="100%"
                     large
+                    btnTxtClass="white--text"
                     @click="sendPhone"
-                    >휴대폰으로 받기</v-btn
                   >
+                    휴대폰으로 받기
+                  </ButtonCmp>
                 </v-col>
                 <v-col cols="6">
-                  <v-btn
-                    class="teal"
-                    outlined
-                    dark
+                  <ButtonCmp
+                    color="teal"
                     width="100%"
                     large
+                    btnTxtClass="white--text"
                     @click="sendEmail"
-                    >이메일로 받기</v-btn
                   >
+                    이메일로 받기
+                  </ButtonCmp>
                 </v-col>
               </v-row>
             </ValidationObserver>
@@ -75,8 +75,8 @@
 
 <script>
   import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
-
   import { email, required, numeric } from 'vee-validate/dist/rules';
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   // extend('max', () => {
   //   ...max
   //   console.log('hi');
@@ -98,6 +98,7 @@
     components: {
       ValidationProvider,
       ValidationObserver,
+      ButtonCmp,
     },
     created() {},
     data() {

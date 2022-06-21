@@ -54,7 +54,7 @@
               </validation-provider>
             </v-list-item-content>
             <v-list-item-action class="mb-7 ml-2">
-              <v-btn class="secondary">중복체크</v-btn>
+              <ButtonCmp color="secondary"> 중복체크 </ButtonCmp>
             </v-list-item-action>
           </v-list-item>
 
@@ -81,7 +81,7 @@
               </validation-provider>
             </v-list-item-content>
             <v-list-item-action class="mb-7 ml-2">
-              <v-btn class="secondary">인증번호 받기</v-btn>
+              <ButtonCmp color="secondary"> 인증번호 받기 </ButtonCmp>
             </v-list-item-action>
           </v-list-item>
           <v-list-item class="px-2">
@@ -105,7 +105,7 @@
               </validation-provider>
             </v-list-item-content>
             <v-list-item-action class="mb-7 ml-2">
-              <v-btn class="secondary">인증번호 확인</v-btn>
+              <ButtonCmp color="secondary"> 인증번호 확인 </ButtonCmp>
             </v-list-item-action>
           </v-list-item>
 
@@ -173,16 +173,16 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-
-        <v-btn
-          class="mt-3 mb-3 teal"
+        <ButtonCmp
+          color="teal"
           width="100%"
-          type="submit"
           large
+          class="mt-5"
+          btnTxtClass="text-subtitle-1 white--text"
           :disabled="invalid"
         >
-          <div class="text-subtitle-1 white--text">회원가입</div>
-        </v-btn>
+          회원가입
+        </ButtonCmp>
         <!-- <v-btn class="mt-3 primary" dark width="100%" @click="clear" large>
           <div class="text-subtitle-1">초기화</div>
         </v-btn> -->
@@ -192,6 +192,7 @@
 </template>
 
 <script>
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   import { required, digits, email, max, regex } from 'vee-validate/dist/rules';
   import {
     extend,
@@ -231,6 +232,7 @@
     components: {
       ValidationProvider,
       ValidationObserver,
+      ButtonCmp,
     },
     data: () => ({
       name: '',

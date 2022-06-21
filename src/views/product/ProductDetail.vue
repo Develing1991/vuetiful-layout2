@@ -99,16 +99,14 @@
                   </v-btn>
                 </v-col> -->
                 <v-col class="px-2 py-1">
-                  <v-btn
+                  <ButtonCmp
                     color="primary"
-                    text-center
-                    large
-                    dark
+                    class="font-weight-bold"
                     width="100%"
-                    class="font-weight-bold text-body-2"
+                    large
                   >
                     구매하기
-                  </v-btn>
+                  </ButtonCmp>
                 </v-col>
               </v-row>
             </v-card-text>
@@ -120,7 +118,11 @@
 </template>
 
 <script>
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   export default {
+    components: {
+      ButtonCmp,
+    },
     data: () => ({
       tab: null,
       items: [

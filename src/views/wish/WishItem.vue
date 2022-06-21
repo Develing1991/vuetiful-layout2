@@ -33,25 +33,25 @@
             <span class="black--text text-subtitle-2">5,500원</span>
           </v-list-item-subtitle>
           <v-list-item-subtitle>
-            <v-btn
+            <ButtonCmp
               color="secondary"
-              dark
               outlined
               x-small
-              @click.stop="deleteWish"
               :ripple="false"
-              >삭제</v-btn
+              @click.stop="deleteWish"
             >
-            <v-btn
+              삭제
+            </ButtonCmp>
+            <ButtonCmp
               class="ml-2"
               color="primary"
-              dark
               outlined
               x-small
-              @click.stop="buyWish"
               :ripple="false"
-              >구매하기</v-btn
+              @click.stop="buyWish"
             >
+              구매하기
+            </ButtonCmp>
           </v-list-item-subtitle>
           <!-- v-list-item-title -->
         </v-list-item-content>
@@ -69,7 +69,11 @@
 </template>
 
 <script>
+  import ButtonCmp from '@/components/ButtonCmp.vue';
   export default {
+    components: {
+      ButtonCmp,
+    },
     data() {
       return {};
     },
