@@ -3,7 +3,38 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+/**********************************/
+var DefaultAppbar = {
+  left: {
+    text: 'mdi-arrow-left',
+  },
+  center: {
+    text: '', // input같은거.. v-html로 되는지 확인
+    //search: false,
+  },
+  right: {
+    text: '', // 배열대신 ,로 split하기
+  },
+};
+function setStructure(structure, direction, text) {
+  structure[direction].text = text; //appar[left].text
+  return structure;
+}
+
+/**********************************/
 const routes = [
+  {
+    path: '/about',
+    name: 'about',
+    //meta: { appbar: DefaultAppbar },
+    component: () => import('../views/AboutView.vue'),
+    beforeEnter: (to, from, next) => {
+      console.log(to);
+      console.log(from);
+      to.params.appbar = setStructure(DefaultAppbar, 'center', '어비웃');
+      next();
+    },
+  },
   {
     path: '/',
     name: 'MainRoot',
@@ -172,14 +203,6 @@ const routes = [
     path: '*',
     name: 'ErrorRoot',
     component: () => import('@/views/error/ErrorView.vue'),
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/AboutView.vue'),
   },
 ];
 
