@@ -6,7 +6,7 @@
         width="100%"
         large
         class="mt-5"
-        btnClass="text-subtitle-1 white--text"
+        btnTxtClass="text-subtitle-1 white--text"
       >
         로그인
       </BtnTest>
@@ -18,7 +18,7 @@
         large
         class="mt-5"
         outlined
-        btnClass="text-subtitle-1"
+        btnTxtClass="text-subtitle-1"
       >
         회원가입
       </BtnTest>
@@ -35,6 +35,19 @@
       </BtnTest>
       <BtnTest class="ml-2" color="primary" outlined x-small :ripple="false">
         구매하기
+      </BtnTest>
+    </div>
+    <div>
+      <BtnTest
+        color="grey lighten-3"
+        fab
+        small
+        fixed
+        bottom
+        right
+        :ripple="false"
+      >
+        <div><v-icon>mdi-chevron-up</v-icon></div>
       </BtnTest>
     </div>
 

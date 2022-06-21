@@ -1,16 +1,33 @@
 <template>
   <v-main>
     <router-view />
-    <ScrollTopBtnCmp :scrollShow="scrollShow" />
+    <TransitionCmp>
+      <ButtonCmp
+        @click="scrollTop"
+        v-show="scrollShow"
+        color="grey lighten-3"
+        fab
+        small
+        fixed
+        bottom
+        right
+        :ripple="false"
+        :style="`margin-bottom:${this.$vuetify.application.top + 10}px`"
+      >
+        <v-icon>mdi-chevron-up</v-icon>
+      </ButtonCmp>
+    </TransitionCmp>
   </v-main>
 </template>
 
 <script>
-  import ScrollTopBtnCmp from '@/components/ScrollTopBtnCmp.vue';
+  import ButtonCmp from '@/components/ButtonCmp.vue';
+  import TransitionCmp from '@/components/TransitionCmp.vue';
   export default {
     name: 'CommonView',
     components: {
-      ScrollTopBtnCmp,
+      ButtonCmp,
+      TransitionCmp,
     },
     data() {
       return {
@@ -22,12 +39,21 @@
         const scrollPosition =
           window.scrollY || document.documentElement.scrollTop;
         this.scrollShow = scrollPosition > 200 ? true : false;
-        //console.log(this.scrollShow);
+      },
+      scrollTop() {
+        const options = {
+          duration: 50, //this.duration,
+          offset: 0, //this.offset,
+          easing: 'linear', //this.easing, easeInOutCubic
+        };
+        const target = document.querySelector('#app');
+
+        this.$vuetify.goTo(target, options);
       },
     },
     mounted() {
       window.addEventListener('scroll', this.handleScroll);
-      console.log(this.$route);
+      //console.log(this.$route);
     },
   };
 </script>

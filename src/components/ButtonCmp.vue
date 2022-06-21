@@ -14,7 +14,7 @@
     :bottom="bottom"
     :left="left"
     :right="right"
-    @click="$emit('click')"
+    @click="$emit('click', $event)"
   >
     <div :class="btnTxtClass">
       <slot> 버튼 </slot>
