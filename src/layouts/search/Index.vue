@@ -1,21 +1,32 @@
 <template>
   <v-app>
-    <AppBar />
-    <SearchIndexView />
-    <Footer />
+    <AppBar @snackbar_on="setSnackBar" />
+    <DefaultView :root_snackbar="root_snackbar" @snackbar_off="setSnackBar" />
+    <DefaultFooter />
   </v-app>
 </template>
 
 <script>
   import AppBar from '@/layouts/search/AppBar.vue';
-  import SearchIndexView from '@/layouts/search/View.vue';
-  import Footer from '@/layouts/search/Footer.vue';
+  import DefaultView from '@/layouts/base/DefaultView.vue';
+  import DefaultFooter from '@/layouts/base/DefaultFooter.vue';
+
   export default {
     name: 'SearchIndex',
     components: {
       AppBar,
-      SearchIndexView,
-      Footer,
+      DefaultView,
+      DefaultFooter,
+    },
+    data() {
+      return {
+        root_snackbar: false,
+      };
+    },
+    methods: {
+      setSnackBar(value) {
+        this.root_snackbar = value;
+      },
     },
   };
 </script>

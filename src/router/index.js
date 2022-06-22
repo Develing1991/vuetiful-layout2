@@ -1,40 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
+import { productRoutes } from '@/router/prod/index';
 Vue.use(VueRouter);
 
-/**********************************/
-var DefaultAppbar = {
-  left: {
-    text: 'mdi-arrow-left',
-  },
-  center: {
-    text: '', // input같은거.. v-html로 되는지 확인
-    //search: false,
-  },
-  right: {
-    text: '', // 배열대신 ,로 split하기
-  },
-};
-function setStructure(structure, direction, text) {
-  structure[direction].text = text; //appar[left].text
-  return structure;
-}
-
-/**********************************/
 const routes = [
-  {
-    path: '/about',
-    name: 'about',
-    //meta: { appbar: DefaultAppbar },
-    component: () => import('../views/AboutView.vue'),
-    beforeEnter: (to, from, next) => {
-      console.log(to);
-      console.log(from);
-      to.params.appbar = setStructure(DefaultAppbar, 'center', '어비웃');
-      next();
-    },
-  },
   {
     path: '/',
     name: 'MainRoot',
@@ -95,28 +64,29 @@ const routes = [
       },
     ],
   },
-  {
-    path: '/product',
-    name: 'ProductRoot',
-    component: () => import('@/layouts/product/Index.vue'),
-    children: [
-      {
-        path: 'list',
-        name: 'ProductList',
-        component: () => import('@/views/product/ProductList.vue'),
-      },
-      {
-        path: 'detail/:id',
-        name: 'ProductDetail',
-        component: () => import('@/views/product/ProductDetail.vue'),
-      },
-      {
-        path: 'view',
-        name: 'ProductView',
-        component: () => import('@/views/product/ProductView.vue'),
-      },
-    ],
-  },
+  productRoutes,
+  // {
+  //   path: '/product',
+  //   name: 'ProductRoot',
+  //   component: () => import('@/layouts/product/Index.vue'),
+  //   children: [
+  //     {
+  //       path: 'list',
+  //       name: 'ProductList',
+  //       component: () => import('@/views/product/ProductList.vue'),
+  //     },
+  //     {
+  //       path: 'detail/:id',
+  //       name: 'ProductDetail',
+  //       component: () => import('@/views/product/ProductDetail.vue'),
+  //     },
+  //     {
+  //       path: 'view',
+  //       name: 'ProductView',
+  //       component: () => import('@/views/product/ProductView.vue'),
+  //     },
+  //   ],
+  // },
   {
     path: '/wish',
     name: 'WishRoot',
@@ -198,6 +168,18 @@ const routes = [
         component: () => import('@/views/auth/private/FindPassView.vue'),
       },
     ],
+  },
+  {
+    path: '/about',
+    name: 'about',
+    //meta: { appbar: DefaultAppbar },
+    component: () => import('../views/AboutView.vue'),
+    beforeEnter: (to, from, next) => {
+      console.log(to);
+      console.log(from);
+      //to.params.appbar = setStructure(DefaultAppbar, 'center', '어비웃');
+      next();
+    },
   },
   {
     path: '*',

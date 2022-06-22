@@ -1,22 +1,17 @@
 <template>
   <v-app>
-    <AppBar />
-    <ProductIndexView />
-    <!-- <Footer /> -->
+    <TestAppBar />
+    <DefaultView />
   </v-app>
 </template>
 
 <script>
-  import AppBar from '@/layouts/product/AppBar.vue';
-  import ProductIndexView from '@/layouts/product/View.vue';
-  //import Footer from '@/layouts/product/Footer.vue';
+  import TestAppBar from '@/layouts/product/AppBar.vue';
+  import DefaultView from '@/layouts/base/DefaultView.vue';
   export default {
-    name: 'SearchIndex',
     components: {
-      AppBar,
-      ProductIndexView,
-      // Footer,
+      TestAppBar,
+      DefaultView,
     },
   };
 </script>
-<style></style>
