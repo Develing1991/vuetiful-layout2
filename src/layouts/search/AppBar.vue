@@ -1,9 +1,7 @@
 <template>
   <SearchAppBar @snackbar_on="doSearch">
     <template slot="SearchAppbarRight">
-      <v-btn icon @click="doSearch">
-        <v-icon class="pt-1 pr-2">mdi-magnify</v-icon>
-      </v-btn>
+      <v-icon class="ml-2" @click="doSearch">mdi-magnify</v-icon>
     </template>
   </SearchAppBar>
 </template>

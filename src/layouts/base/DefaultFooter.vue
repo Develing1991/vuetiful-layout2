@@ -33,7 +33,7 @@
 
 <script>
   export default {
-    name: 'CommonFooter',
+    name: 'DefaultFooter',
     data: () => ({ value: 0 }),
     mounted() {
       this.value = 0;

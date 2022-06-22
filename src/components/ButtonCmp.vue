@@ -16,6 +16,7 @@
     :right="right"
     :disabled="disabled"
     :elevation="elevation"
+    :icon="icon"
     @click="$emit('click', $event)"
   >
     <div :class="btnTxtClass">
@@ -90,6 +91,10 @@
       elevation: {
         type: String,
         default: '1',
+      },
+      icon: {
+        type: Boolean,
+        default: false,
       },
       btnTxtClass: {
         type: String,

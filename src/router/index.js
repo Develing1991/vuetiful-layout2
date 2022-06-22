@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { productRoutes } from '@/router/prod/index';
+import { productRoutes } from '@/router/product/index';
+import { wishRoutes } from '@/router/wish/index';
 Vue.use(VueRouter);
 
 const routes = [
@@ -65,47 +66,7 @@ const routes = [
     ],
   },
   productRoutes,
-  // {
-  //   path: '/product',
-  //   name: 'ProductRoot',
-  //   component: () => import('@/layouts/product/Index.vue'),
-  //   children: [
-  //     {
-  //       path: 'list',
-  //       name: 'ProductList',
-  //       component: () => import('@/views/product/ProductList.vue'),
-  //     },
-  //     {
-  //       path: 'detail/:id',
-  //       name: 'ProductDetail',
-  //       component: () => import('@/views/product/ProductDetail.vue'),
-  //     },
-  //     {
-  //       path: 'view',
-  //       name: 'ProductView',
-  //       component: () => import('@/views/product/ProductView.vue'),
-  //     },
-  //   ],
-  // },
-  {
-    path: '/wish',
-    name: 'WishRoot',
-    component: () => import('@/layouts/wish/Index.vue'),
-    children: [
-      {
-        path: 'view',
-        name: 'WishView',
-        meta: { appbarName: '찜 리스트' },
-        component: () => import('@/views/wish/WishView.vue'),
-      },
-      // {
-      //   path: 'list',
-      //   name: 'WishList',
-      //   meta: { appbarName: '찜 리스트' },
-      //   component: () => import('@/views/wish/WishList.vue'),
-      // },
-    ],
-  },
+  wishRoutes,
   {
     path: '/my',
     name: 'MyRoot',

@@ -37,7 +37,7 @@
   import ButtonCmp from '@/components/ButtonCmp.vue';
   import TransitionCmp from '@/components/TransitionCmp.vue';
   export default {
-    name: 'CommonView',
+    name: 'DefaultView',
     components: {
       ButtonCmp,
       TransitionCmp,
