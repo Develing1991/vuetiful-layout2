@@ -1,22 +1,6 @@
 <template>
   <v-main>
     <router-view />
-    <TransitionCmp>
-      <ButtonCmp
-        @click="scrollTop"
-        v-show="scrollShow"
-        color="grey lighten-3"
-        fab
-        small
-        fixed
-        bottom
-        right
-        :ripple="false"
-        :style="`margin-bottom:${this.$vuetify.application.top + 10}px`"
-      >
-        <v-icon>mdi-chevron-up</v-icon>
-      </ButtonCmp>
-    </TransitionCmp>
     <v-snackbar
       v-model="self_snackbar"
       :width="$vuetify.breakpoint.width + 50"
@@ -34,13 +18,11 @@
 </template>
 
 <script>
-  import ButtonCmp from '@/components/ButtonCmp.vue';
-  import TransitionCmp from '@/components/TransitionCmp.vue';
+  //import TransitionCmp from '@/components/TransitionCmp.vue';
   export default {
-    name: 'DefaultView',
+    name: 'LayoutSearchWordView',
     components: {
-      ButtonCmp,
-      TransitionCmp,
+      //TransitionCmp,
     },
     props: {
       root_snackbar: {
@@ -60,30 +42,8 @@
     },
     data() {
       return {
-        scrollShow: false,
         self_snackbar: false,
       };
-    },
-    methods: {
-      handleScroll() {
-        const scrollPosition =
-          window.scrollY || document.documentElement.scrollTop;
-        this.scrollShow = scrollPosition > 200 ? true : false;
-      },
-      scrollTop() {
-        const options = {
-          duration: 50, //this.duration,
-          offset: 0, //this.offset,
-          easing: 'linear', //this.easing, easeInOutCubic
-        };
-        const target = document.querySelector('#app');
-
-        this.$vuetify.goTo(target, options);
-      },
-    },
-    mounted() {
-      window.addEventListener('scroll', this.handleScroll);
-      //console.log(this.$route);
     },
   };
 </script>

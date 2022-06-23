@@ -1,22 +1,21 @@
 <template>
   <v-app>
     <AppBar />
-    <CategoryIndexView />
-    <Footer />
+    <LayoutBaseView />
+    <LayoutBaseFooter />
   </v-app>
 </template>
 
 <script>
   import AppBar from '@/layouts/category/AppBar.vue';
-  import CategoryIndexView from '@/layouts/category/View.vue';
-  import Footer from '@/layouts/category/Footer.vue';
-
+  import LayoutBaseView from '@/layouts/base/views/LayoutBaseView.vue';
+  import LayoutBaseFooter from '@/layouts/base/footers/LayoutBaseFooter.vue';
   export default {
-    name: 'CategoryIndex',
+    name: 'WishIndex',
     components: {
       AppBar,
-      CategoryIndexView,
-      Footer,
+      LayoutBaseView,
+      LayoutBaseFooter,
     },
   };
 </script>

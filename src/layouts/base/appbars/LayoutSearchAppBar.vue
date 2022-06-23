@@ -1,14 +1,10 @@
 <template>
-  <DefaultAppBar>
-    <!-- left -->
-    <template slot="DefaultAppbarLeft">
-      <slot name="SearchAppbarLeft">
+  <v-card>
+    <v-app-bar app color="white elevation-1">
+      <slot name="LayoutSearchAppBarLeft">
         <v-icon class="mt-1" @click="$router.go(-1)">mdi-arrow-left</v-icon>
       </slot>
-    </template>
-    <!-- center -->
-    <template slot="DefaultAppbarCenter">
-      <slot name="SearchAppbarCenter">
+      <slot name="LayoutSearchAppBarCenter">
         <v-text-field
           hide-details
           outlined
@@ -31,21 +27,15 @@
           </v-icon>
         </v-text-field>
       </slot>
-    </template>
-    <!-- right -->
-    <template slot="DefaultAppbarRight">
-      <slot name="SearchAppbarRight"> </slot>
-    </template>
-  </DefaultAppBar>
+      <slot name="LayoutSearchAppBarRight"> </slot>
+    </v-app-bar>
+  </v-card>
 </template>
 
 <script>
-  import DefaultAppBar from '@/layouts/base/DefaultAppBar';
   import { mapGetters } from 'vuex';
   export default {
-    components: {
-      DefaultAppBar,
-    },
+    components: {},
 
     computed: {
       ...mapGetters({

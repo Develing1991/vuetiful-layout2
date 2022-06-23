@@ -1,6 +1,8 @@
 <template>
-  <SearchAppBar>
-    <template slot="SearchAppbarRight">
+  <LayoutSearchAppBar>
+    <template slot="LayoutSearchAppBarLeft"> </template>
+    <template slot="LayoutSearchAppBarCenter"> </template>
+    <template slot="LayoutSearchAppBarRight">
       <v-icon class="ml-3 mr-1 pt-1" @click="$router.push({ name: 'MainView' })"
         >mdi-home-outline</v-icon
       >
@@ -8,15 +10,15 @@
         >mdi-cart-heart</v-icon
       >
     </template>
-  </SearchAppBar>
+  </LayoutSearchAppBar>
 </template>
 
 <script>
-  import SearchAppBar from '@/layouts/base/appbars/SearchAppBar';
+  import LayoutSearchAppBar from '@/layouts/base/appbars/LayoutSearchAppBar';
 
   export default {
     components: {
-      SearchAppBar,
+      LayoutSearchAppBar,
     },
   };
 </script>

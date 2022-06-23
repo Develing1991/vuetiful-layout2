@@ -1,18 +1,20 @@
 <template>
-  <SearchAppBar @snackbar_on="doSearch">
-    <template slot="SearchAppbarRight">
+  <LayoutSearchAppBar @snackbar_on="doSearch">
+    <template slot="LayoutSearchAppBarLeft"> </template>
+    <template slot="LayoutSearchAppBarCenter"> </template>
+    <template slot="LayoutSearchAppBarRight">
       <v-icon class="ml-2" @click="doSearch">mdi-magnify</v-icon>
     </template>
-  </SearchAppBar>
+  </LayoutSearchAppBar>
 </template>
 
 <script>
-  import SearchAppBar from '@/layouts/base/appbars/SearchAppBar';
+  import LayoutSearchAppBar from '@/layouts/base/appbars/LayoutSearchAppBar';
   import { mapGetters } from 'vuex';
 
   export default {
     components: {
-      SearchAppBar,
+      LayoutSearchAppBar,
     },
     data() {
       return {};

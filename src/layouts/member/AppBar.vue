@@ -15,7 +15,7 @@
 <script>
   import LayoutBaseAppBar from '@/layouts/base/appbars/LayoutBaseAppBar.vue';
   export default {
-    name: 'AuthAppBar',
+    name: 'MemeberAppBar',
     components: {
       LayoutBaseAppBar,
     },

@@ -24,11 +24,12 @@
   import ButtonCmp from '@/components/ButtonCmp.vue';
   import TransitionCmp from '@/components/TransitionCmp.vue';
   export default {
-    name: 'CommonView',
+    name: 'LayoutScrollTopView',
     components: {
       ButtonCmp,
       TransitionCmp,
     },
+
     data() {
       return {
         scrollShow: false,
@@ -53,7 +54,6 @@
     },
     mounted() {
       window.addEventListener('scroll', this.handleScroll);
-      //console.log(this.$route);
     },
   };
 </script>

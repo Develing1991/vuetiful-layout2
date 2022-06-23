@@ -1,22 +1,25 @@
 <template>
   <v-app>
     <AppBar @snackbar_on="setSnackBar" />
-    <DefaultView :root_snackbar="root_snackbar" @snackbar_off="setSnackBar" />
-    <DefaultFooter />
+    <LayoutSearchWordView
+      :root_snackbar="root_snackbar"
+      @snackbar_off="setSnackBar"
+    />
+    <LayoutBaseFooter />
   </v-app>
 </template>
 
 <script>
   import AppBar from '@/layouts/search/AppBar.vue';
-  import DefaultView from '@/layouts/base/DefaultView.vue';
-  import DefaultFooter from '@/layouts/base/DefaultFooter.vue';
+  import LayoutSearchWordView from '@/layouts/base/views/LayoutSearchWordView.vue';
+  import LayoutBaseFooter from '@/layouts/base/footers/LayoutBaseFooter.vue';
 
   export default {
     name: 'SearchIndex',
     components: {
       AppBar,
-      DefaultView,
-      DefaultFooter,
+      LayoutSearchWordView,
+      LayoutBaseFooter,
     },
     data() {
       return {

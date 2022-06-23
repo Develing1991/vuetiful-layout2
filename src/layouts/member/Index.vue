@@ -2,17 +2,20 @@
   <v-app>
     <AppBar />
     <LayoutBaseView />
+    <LayoutBaseFooter />
   </v-app>
 </template>
 
 <script>
-  import AppBar from '@/layouts/auth/AppBar.vue';
+  import AppBar from '@/layouts/member/AppBar.vue';
   import LayoutBaseView from '@/layouts/base/views/LayoutBaseView.vue';
+  import LayoutBaseFooter from '@/layouts/base/footers/LayoutBaseFooter.vue';
   export default {
     name: 'WishIndex',
     components: {
       AppBar,
       LayoutBaseView,
+      LayoutBaseFooter,
     },
   };
 </script>

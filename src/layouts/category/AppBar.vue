@@ -1,37 +1,26 @@
 <template>
-  <AppBar>
-    <v-card>
-      <v-app-bar app color="white elevation-1">
-        <v-container fluid>
-          <v-row justify="space-between" align="center">
-            <v-col cols="1" class="px-0" />
-
-            <v-col cols="auto" class="px-0 pt-5">
-              <span class="font-weight-bold">{{ $route.meta.appbarName }}</span>
-            </v-col>
-            <v-col cols="1" class="px-0">
-              <!-- <v-btn icon to="/main/view">
-              <v-icon class="mt-1">mdi-close</v-icon>
-            </v-btn> -->
-              <v-icon class="mt-1" @click="$router.push({ name: 'MainView' })"
-                >mdi-close</v-icon
-              >
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-app-bar>
-    </v-card>
-  </AppBar>
+  <LayoutBaseAppBar>
+    <template slot="LayoutBaseAppBarLeft"> </template>
+    <template slot="LayoutBaseAppBarCenter"
+      ><span class="font-weight-bold">{{ $route.meta.appbarName }}</span>
+      <v-spacer />
+    </template>
+    <template slot="LayoutBaseAppBarRight">
+      <v-icon class="mt-1" @click="$router.push({ name: 'MainView' })"
+        >mdi-close</v-icon
+      >
+    </template>
+  </LayoutBaseAppBar>
 </template>
 
 <script>
-  import AppBar from '@/layouts/common/AppBar.vue';
+  import LayoutBaseAppBar from '@/layouts/base/appbars/LayoutBaseAppBar.vue';
   export default {
     name: 'CategoryAppBar',
     components: {
-      AppBar,
+      LayoutBaseAppBar,
     },
   };
 </script>
 
-<style scoped></style>
+<style></style>

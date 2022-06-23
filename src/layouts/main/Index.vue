@@ -1,23 +1,22 @@
 <template>
   <v-app>
     <AppBar />
-    <MainIndexView />
-    <Footer />
+    <LayoutScrollTopView />
+    <LayoutBaseFooter />
   </v-app>
 </template>
 
 <script>
   import AppBar from '@/layouts/main/AppBar.vue';
-  import MainIndexView from '@/layouts/main/View.vue';
-  import Footer from '@/layouts/main/Footer.vue';
+  import LayoutScrollTopView from '@/layouts/base/views/LayoutScrollTopView.vue';
+  import LayoutBaseFooter from '@/layouts/base/footers/LayoutBaseFooter.vue';
   export default {
-    name: 'MainIndex',
+    name: 'WishIndex',
     components: {
       AppBar,
-      MainIndexView,
-      Footer,
+      LayoutScrollTopView,
+      LayoutBaseFooter,
     },
   };
 </script>
-
-<style scoped></style>
+<style></style>

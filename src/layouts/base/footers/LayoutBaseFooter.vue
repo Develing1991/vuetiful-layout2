@@ -33,7 +33,7 @@
 
 <script>
   export default {
-    name: 'DefaultFooter',
+    name: 'LayoutBaseFooter',
     data: () => ({ value: 0 }),
     mounted() {
       this.value = 0;

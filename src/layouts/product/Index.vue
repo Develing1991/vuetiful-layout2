@@ -1,17 +1,17 @@
 <template>
   <v-app>
     <Appbar />
-    <DefaultView />
+    <LayoutScrollTopView />
   </v-app>
 </template>
 
 <script>
   import Appbar from '@/layouts/product/AppBar.vue';
-  import DefaultView from '@/layouts/base/DefaultView.vue';
+  import LayoutScrollTopView from '@/layouts/base/views/LayoutScrollTopView.vue';
   export default {
     components: {
       Appbar,
-      DefaultView,
+      LayoutScrollTopView,
     },
   };
 </script>
