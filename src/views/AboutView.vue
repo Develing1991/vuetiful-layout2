@@ -1,150 +1,84 @@
 <template>
-  <div>
-    <div>
-      <TextFieldCmp
-        color="teal"
-        label="이메일"
-        prepend-inner-icon="mdi-email-outline"
-        outlined
-        dense
-        :solo="false"
-      />
-      <TextFieldCmp
-        color="teal"
-        label="비밀번호"
-        :prependInnerIcon="
-          showPass ? 'mdi-lock-open-outline' : 'mdi-lock-outline'
-        "
-        :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
-        :type="showPass ? 'text' : 'password'"
-        @update:append="showPass = !showPass"
-        outlined
-        dense
-        :solo="false"
-      />
-    </div>
-    <!-- bizCheck -->
-    <div>
-      <div>입력 키워드 : {{ sample1 }}</div>
-      <form action="">
-        <!-- validation check하려면 v-model사용 -->
-        <TextFieldCmp
-          v-model="sample1"
-          color="teal"
-          label="샘플1"
-          outlined
-          :solo="false"
-          :required="true"
-        />
-        <v-btn type="submit">전송</v-btn>
-      </form>
+  <v-card class="mx-auto" max-width="100%" elevation="0">
+    <v-container>
+      <v-row>
+        <v-col class="pa-0">
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="100vmin"
+          />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <div style="font-size: 5vw" class="font-weight-bold red--text">
+            지금 45% 할인 중
+          </div>
+          <div style="font-size: 4vw" class="font-weight-bold">
+            팀스핏 빅사이즈 기능성 쿨 카라 반팔 티셔츠
+          </div>
+          <div
+            style="font-size: 4vw"
+            class="text-decoration-line-through grey--text"
+          >
+            27,750
+          </div>
+          <div style="font-size: 4.5vw" class="font-weight-bold red--text">
+            15,000원
+          </div>
+          <div style="font-size: 5vw"></div>
+        </v-col>
+        <v-col>
+          <div style="font-size: 5vw" class="font-weight-bold red--text">
+            지금 45% 할인 중
+          </div>
+          <div style="font-size: 4vw" class="font-weight-bold">
+            팀스핏 빅사이즈 기능성 쿨 카라 반팔 티셔츠
+          </div>
+          <div
+            style="font-size: 4vw"
+            class="text-decoration-line-through grey--text"
+          >
+            27,750
+          </div>
+          <div style="font-size: 4.5vw" class="font-weight-bold red--text">
+            15,000원
+          </div>
+          <div style="font-size: 5vw"></div>
+        </v-col>
+      </v-row>
+    </v-container>
 
-      <div>입력 키워드 : {{ sample2 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플2"
-        outlined
-        :solo="false"
-        reverse
-        @input="(value) => (sample2 = value)"
-      />
-      <div>입력 키워드 : {{ sample3 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플3"
-        outlined
-        prefix="프리픽스"
-        :solo="false"
-        error-messages="errors!!!"
-        @input="(value) => (sample3 = value)"
-      />
-      <div>입력 키워드 : {{ sample4 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플4"
-        outlined
-        rounded
-        :solo="false"
-        @input="(value) => (sample4 = value)"
-      />
-      <div>입력 키워드 : {{ sample5 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플5"
-        outlined
-        dense
-        @input="(value) => (sample5 = value)"
-      />
-      <div>입력 키워드 : {{ sample6 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플6 - readyonly"
-        outlined
-        dense
-        readonly
-        @input="(value) => (sample6 = value)"
-      />
-      <div>입력 키워드 : {{ sample7 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플7"
-        outlined
-        dense
-        :loading="true"
-        @input="(value) => (sample7 = value)"
-      />
-      <div>입력 키워드 : {{ sample8 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플8"
-        outlined
-        dense
-        :loading="true"
-        loaderHeight="5"
-        @input="(value) => (sample8 = value)"
-      />
-      <div>입력 키워드 : {{ sample9 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플9"
-        outlined
-        placeholder="플레이스홀더~"
-        @input="(value) => (sample9 = value)"
-      />
-      <div>입력 키워드 : {{ sample10 }}</div>
-      <TextFieldCmp
-        color="teal"
-        label="샘플10"
-        outlined
-        height="150"
-        @input="(value) => (sample10 = value)"
-      />
-    </div>
-  </div>
+    <!-- <v-divider /> -->
+
+    <!-- <v-card-text>
+      I'm a thing. But, like most politicians, he promised more than he could
+      deliver. You won't have time for sleeping, soldier, not with all the bed
+      making you'll be doing. Then we'll go with that data file! Hey, you add a
+      one and two zeros to that or we walk! You're going to do his laundry? I've
+      got to find a way to escape.
+    </v-card-text> -->
+
+    <!-- <v-expand-transition>
+      <div v-show="show">
+        <v-divider />
+
+        <v-card-text>
+          I'm a thing. But, like most politicians, he promised more than he
+          could deliver. You won't have time for sleeping, soldier, not with all
+          the bed making you'll be doing. Then we'll go with that data file!
+          Hey, you add a one and two zeros to that or we walk! You're going to
+          do his laundry? I've got to find a way to escape.
+        </v-card-text>
+      </div>
+    </v-expand-transition> -->
+  </v-card>
 </template>
 
 <script>
-  import TextFieldCmp from '@/components/TextFieldCmp.vue';
   export default {
-    components: {
-      TextFieldCmp,
-    },
-    data() {
-      return {
-        showPass: false,
-        sample1: null,
-        sample2: null,
-        sample3: null,
-        sample4: null,
-        sample5: null,
-        sample6: null,
-        sample7: null,
-        sample8: null,
-        sample9: null,
-        sample10: null,
-      };
-    },
+    data: () => ({
+      show: false,
+    }),
   };
 </script>
-
-<style></style>
