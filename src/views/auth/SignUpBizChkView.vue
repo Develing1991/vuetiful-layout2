@@ -47,6 +47,15 @@
                 dense
                 @keydown="keyinBizNum"
               />
+              <!-- <TextFieldCmp
+                v-model="name"
+                label="사업자번호"
+                required
+                outlined
+                dense
+                :error-messages="`${errors}`"
+                @keydown="keyinBizNum"
+              /> -->
             </validation-provider>
           </v-list-item-content>
           <v-list-item-action class="mb-7 ml-2">
@@ -83,6 +92,7 @@
 <script>
   import { required, digits, max, regex } from 'vee-validate/dist/rules';
   import ButtonCmp from '@/components/ButtonCmp.vue';
+  //import TextFieldCmp from '@/components/TextFieldCmp.vue';
   import {
     extend,
     ValidationObserver,
@@ -117,6 +127,7 @@
       ValidationProvider,
       ValidationObserver,
       ButtonCmp,
+      //TextFieldCmp,
     },
     data: () => ({
       name: '',

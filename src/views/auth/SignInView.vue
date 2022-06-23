@@ -26,14 +26,14 @@
                 rules="required|email"
                 v-slot="{ errors }"
               >
-                <v-text-field
+                <TextFieldCmp
                   color="teal"
                   v-model="email"
                   label="이메일"
                   prepend-inner-icon="mdi-email-outline"
                   outlined
                   dense
-                  :error-messages="errors"
+                  :errorMessages="`${errors}`"
                 />
               </ValidationProvider>
               <ValidationProvider
@@ -41,12 +41,10 @@
                 rules="required"
                 v-slot="{ errors }"
               >
-                <!-- v-slot="{ errors, invalid }" -->
-                <!-- :hide-details="!invalid" -->
-                <v-text-field
-                  v-model="password"
+                <TextFieldCmp
                   color="teal"
                   label="비밀번호"
+                  v-model="password"
                   prepend-inner-icon="mdi-lock-outline"
                   :append-icon="
                     password.length > 0
@@ -59,7 +57,7 @@
                   @click:append="showPass = !showPass"
                   outlined
                   dense
-                  :error-messages="errors"
+                  :errorMessages="`${errors}`"
                 />
               </ValidationProvider>
               <v-checkbox
@@ -129,6 +127,7 @@
   import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
   import { email, required } from 'vee-validate/dist/rules';
   import ButtonCmp from '@/components/ButtonCmp.vue';
+  import TextFieldCmp from '@/components/TextFieldCmp.vue';
   // extend('max', () => {
   //   ...max
   //   console.log('hi');
@@ -179,6 +178,7 @@
       ValidationProvider,
       ValidationObserver,
       ButtonCmp,
+      TextFieldCmp,
     },
   };
 </script>
