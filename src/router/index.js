@@ -20,8 +20,8 @@ const routes = [
   memberRoutes,
   authRoutes,
   {
-    path: '/about',
-    name: 'about',
+    path: '/test',
+    name: 'test',
     component: () => import('../views/AboutView.vue'),
     beforeEnter: (to, from, next) => {
       console.log(to);
