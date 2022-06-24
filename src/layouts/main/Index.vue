@@ -1,4 +1,12 @@
 <template>
+  <!-- <v-app
+    style="
+      max-width: 720px !important;
+      margin: 0 auto !important;
+      border: 1px solid #eee;
+      box-sizing: border-box;
+    "
+  > -->
   <v-app>
     <AppBar />
     <LayoutScrollTopView />

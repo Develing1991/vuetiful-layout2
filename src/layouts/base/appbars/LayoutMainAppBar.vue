@@ -1,5 +1,16 @@
 <template>
   <v-card>
+    <!-- <v-app-bar
+      app
+      color="white elevation-1"
+      hide-on-scroll
+      style="
+        max-width: 720px !important;
+        margin: 0 auto !important;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+      "
+    > -->
     <v-app-bar app color="white elevation-1" hide-on-scroll>
       <slot name="LayoutMainAppBarLeft"></slot>
       <slot name="LayoutMainAppBarCenter"></slot>

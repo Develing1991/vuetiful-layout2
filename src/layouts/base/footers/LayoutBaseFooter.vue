@@ -1,4 +1,14 @@
 <template>
+  <!-- <v-footer
+    class="pa-0"
+    app
+    style="
+      max-width: 720px !important;
+      margin: 0 auto !important;
+      border: 1px solid #eee;
+      box-sizing: border-box;
+    "
+  > -->
   <v-footer class="pa-0" app>
     <v-bottom-navigation :value="value" color="black" grow fluid>
       <v-btn to="/category/view">

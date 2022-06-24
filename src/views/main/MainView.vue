@@ -28,10 +28,15 @@
         </div>
       </v-carousel>
     </v-row>
-    <v-row>
-      <v-col cols="12">
+    <v-row class="grey lighten-3">
+      <v-col cols="12" class="pb-0">
+        <SlideDoubleSampleCmp />
+      </v-col>
+    </v-row>
+    <v-row class="grey lighten-3">
+      <v-col cols="12" class="pb-0">
         <v-card
-          class="mx-auto my-2"
+          class="mx-auto mb-3"
           tile
           elevation="2"
           v-for="i in 12"
@@ -74,11 +79,15 @@
 
 <script>
   //  import ScrollTopBtnCmp from '@/components/ScrollTopBtnCmp.vue';
+  //import AboutView from '@/views/AboutView.vue';
+  import SlideDoubleSampleCmp from '@/components/slide/SlideDoubleSampleCmp.vue';
   export default {
     name: 'MainView',
-    // components: {
-    //   ScrollTopBtnCmp,
-    // },
+    components: {
+      //ScrollTopBtnCmp,
+      //AboutView,
+      SlideDoubleSampleCmp,
+    },
     data() {
       return {
         crsl_cnt: 1,

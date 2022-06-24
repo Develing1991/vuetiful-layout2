@@ -1,56 +1,38 @@
 <template>
-  <v-card class="mx-auto pa-3" max-width="40vmin" elevation="0">
-    <v-container>
-      <v-row>
-        <v-col class="pa-0">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="40vmin"
-          />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <div style="font-size: 3vw" class="font-weight-bold red--text">
-            지금 45% 할인 중
-          </div>
-          <div style="font-size: 2vw" class="font-weight-bold">
-            팀스핏 빅사이즈 기능성 쿨 카라 반팔 티셔츠
-          </div>
-          <div
-            style="font-size: 3vw"
-            class="text-decoration-line-through grey--text"
-          >
-            27,750
-          </div>
-          <div style="font-size: 3vw" class="font-weight-bold red--text">
-            15,000원
-          </div>
-          <div style="font-size: 5vw"></div>
-        </v-col>
-      </v-row>
-    </v-container>
-
-    <!-- <v-expand-transition>
-      <div v-show="show">
-        <v-divider />
-
-        <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he
-          could deliver. You won't have time for sleeping, soldier, not with all
-          the bed making you'll be doing. Then we'll go with that data file!
-          Hey, you add a one and two zeros to that or we walk! You're going to
-          do his laundry? I've got to find a way to escape.
-        </v-card-text>
-      </div>
-    </v-expand-transition> -->
-  </v-card>
+  <div style="height: 100%">
+    <div
+      class="img"
+      :style="{
+        'background-image': `url(${'https://dliveimg.kbnc.co.kr/shop/upload/main/155/0000000000642491651033823320_main.png'})`,
+      }"
+    ></div>
+    <div style="font-size: 8px" class="font-weight-bold red--text">
+      지금 45% 할인 중
+    </div>
+    <div style="font-size: 8px" class="font-weight-bold">
+      팀스핏 빅사이즈 기능성 쿨 카라 반팔 티셔츠
+    </div>
+    <div style="font-size: 8px" class="text-decoration-line-through grey--text">
+      27,750
+    </div>
+    <div style="font-size: 8px" class="font-weight-bold red--text">
+      15,000원
+    </div>
+  </div>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      show: false,
-    }),
-  };
+  export default {};
 </script>
+
+<style scoped lang="scss">
+  .img {
+    //color: red;
+    width: 100%;
+    height: 50%;
+    //background-image: url(https://dliveimg.kbnc.co.kr/shop/upload/main/155/0000000000642491651033823320_main.png); //이미지 사이즈가 정해저야함
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top center;
+  }
+</style>
