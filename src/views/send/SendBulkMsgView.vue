@@ -2,6 +2,7 @@
   <v-container>
     <ValidationObserver ref="observer">
       <v-card outlined class="rounded-lg pa-2">
+        상품정보~~
         <v-list class="rounded-lg py-0">
           <v-list-item class="px-2">
             <v-list-item-content class="pb-0">

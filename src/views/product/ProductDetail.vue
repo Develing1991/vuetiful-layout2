@@ -104,6 +104,7 @@
                     class="font-weight-bold"
                     width="100%"
                     large
+                    @click="$router.push({ name: 'SendBulkMsgView' })"
                   >
                     구매하기
                   </ButtonCmp>

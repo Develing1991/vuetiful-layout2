@@ -26,7 +26,7 @@
                 rules="required|email"
                 v-slot="{ errors }"
               >
-                <TextFieldCmp
+                <v-text-field
                   color="teal"
                   v-model="email"
                   label="이메일"
@@ -35,13 +35,22 @@
                   dense
                   :errorMessages="`${errors}`"
                 />
+                <!-- <TextFieldCmp
+                  color="teal"
+                  v-model="email"
+                  label="이메일"
+                  prepend-inner-icon="mdi-email-outline"
+                  outlined
+                  dense
+                  :errorMessages="`${errors}`"
+                /> -->
               </ValidationProvider>
               <ValidationProvider
                 name="비밀번호"
                 rules="required"
                 v-slot="{ errors }"
               >
-                <TextFieldCmp
+                <v-text-field
                   color="teal"
                   label="비밀번호"
                   v-model="password"
@@ -59,6 +68,24 @@
                   dense
                   :errorMessages="`${errors}`"
                 />
+                <!-- <TextFieldCmp
+                  color="teal"
+                  label="비밀번호"
+                  v-model="password"
+                  prepend-inner-icon="mdi-lock-outline"
+                  :append-icon="
+                    password.length > 0
+                      ? showPass
+                        ? 'mdi-eye'
+                        : 'mdi-eye-off'
+                      : ''
+                  "
+                  :type="showPass ? 'text' : 'password'"
+                  @click:append="showPass = !showPass"
+                  outlined
+                  dense
+                  :errorMessages="`${errors}`"
+                /> -->
               </ValidationProvider>
               <v-checkbox
                 v-model="checkEmailSave"
@@ -127,7 +154,7 @@
   import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
   import { email, required } from 'vee-validate/dist/rules';
   import ButtonCmp from '@/components/ButtonCmp.vue';
-  import TextFieldCmp from '@/components/TextFieldCmp.vue';
+  //import TextFieldCmp from '@/components/TextFieldCmp.vue';
   // extend('max', () => {
   //   ...max
   //   console.log('hi');
@@ -178,7 +205,7 @@
       ValidationProvider,
       ValidationObserver,
       ButtonCmp,
-      TextFieldCmp,
+      //TextFieldCmp,
     },
   };
 </script>

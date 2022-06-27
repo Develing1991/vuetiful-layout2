@@ -7,6 +7,7 @@ import { searchRoutes } from '@/router/search/index';
 import { categoryRoutes } from '@/router/category/index';
 import { memberRoutes } from '@/router/member/index';
 import { authRoutes } from '@/router/auth/index';
+import { sendRoutes } from '@/router/send/index';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,7 @@ const routes = [
   wishRoutes,
   memberRoutes,
   authRoutes,
+  sendRoutes,
   {
     path: '/test',
     name: 'test',
