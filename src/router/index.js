@@ -13,43 +13,43 @@ import { sampleRoutes } from '@/router/sample/index';
 Vue.use(VueRouter);
 
 const routes = [
-  mainRoutes1,
-  mainRoutes2,
-  searchRoutes,
-  categoryRoutes,
-  productRoutes,
-  wishRoutes,
-  memberRoutes,
-  authRoutes,
-  sendRoutes,
-  sampleRoutes,
-  {
-    path: '/test',
-    name: 'test',
-    component: () => import('../views/AboutView.vue'),
-    beforeEnter: (to, from, next) => {
-      console.log(to);
-      console.log(from);
-      next();
-    },
-  },
-  {
-    path: '*',
-    name: 'ErrorRoot',
-    component: () => import('@/views/error/ErrorView.vue'),
-  },
+	mainRoutes1,
+	mainRoutes2,
+	searchRoutes,
+	categoryRoutes,
+	productRoutes,
+	wishRoutes,
+	memberRoutes,
+	authRoutes,
+	sendRoutes,
+	sampleRoutes,
+	{
+		path: '/test',
+		name: 'test',
+		component: () => import('../views/AboutView.vue'),
+		beforeEnter: (to, from, next) => {
+			console.log(to);
+			console.log(from);
+			next();
+		},
+	},
+	{
+		path: '*',
+		name: 'ErrorRoot',
+		component: () => import('@/views/error/ErrorView.vue'),
+	},
 ];
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
-  // scrollBehavior(to, from, savedPosition) {
-  //   console.log(to);
-  //   console.log(from);
-  //   console.log(savedPosition);
-  //   return { x: 100, y: 300 };
-  // },
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes,
+	// scrollBehavior(to, from, savedPosition) {
+	//   console.log(to);
+	//   console.log(from);
+	//   console.log(savedPosition);
+	//   return { x: 100, y: 300 };
+	// },
 });
 
 //글로벌 비포 가드

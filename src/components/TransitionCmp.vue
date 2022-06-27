@@ -1,18 +1,18 @@
 <template>
-  <transition :name="name">
-    <slot></slot>
-  </transition>
+	<transition :name="name">
+		<slot></slot>
+	</transition>
 </template>
 
 <script>
-  export default {
-    props: {
-      name: {
-        type: String,
-        default: 'slide-fade',
-      },
-    },
-  };
+	export default {
+		props: {
+			name: {
+				type: String,
+				default: 'slide-fade',
+			},
+		},
+	};
 </script>
 
 <style></style>
