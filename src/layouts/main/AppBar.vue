@@ -10,6 +10,7 @@
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
           transition="scale-transition"
           width="40"
+          @click="$router.push({ name: 'SampleList' })"
         />
       </div>
       <!-- <v-app-bar-title>Title</v-app-bar-title> -->

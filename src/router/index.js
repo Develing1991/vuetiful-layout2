@@ -8,6 +8,7 @@ import { categoryRoutes } from '@/router/category/index';
 import { memberRoutes } from '@/router/member/index';
 import { authRoutes } from '@/router/auth/index';
 import { sendRoutes } from '@/router/send/index';
+import { sampleRoutes } from '@/router/sample/index';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,7 @@ const routes = [
   memberRoutes,
   authRoutes,
   sendRoutes,
+  sampleRoutes,
   {
     path: '/test',
     name: 'test',
