@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-29T02:09:09.969Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="LkGzTwCukeix51xQgvXd" version="20.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-29T02:10:50.974Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="zftbIAIsmarBwHfp74Ob" version="20.0.3" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="677" dy="336" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -62,13 +62,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="denZKagu3ZkojtByg-fw-54" value="store.getter(&#39;MY_INFO&#39;)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=1.4;entryY=0.935;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="denZKagu3ZkojtByg-fw-4">
+        <mxCell id="denZKagu3ZkojtByg-fw-54" value="computed : store.getter(&#39;MY_INFO&#39;)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=1.4;entryY=0.935;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="denZKagu3ZkojtByg-fw-4">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-268" y="775.1000000000001" as="targetPoint" />
+            <mxPoint x="-268" y="744.1000000000001" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-134" y="775" />
+              <mxPoint x="-134" y="744" />
             </Array>
-            <mxPoint x="44.99999999999977" y="775.8299999999999" as="sourcePoint" />
+            <mxPoint x="44.99999999999977" y="744.8299999999999" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="denZKagu3ZkojtByg-fw-58" value="return userID, Token" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="denZKagu3ZkojtByg-fw-4">
@@ -115,7 +115,7 @@
           <mxGeometry x="-80" y="310" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="denZKagu3ZkojtByg-fw-52" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="denZKagu3ZkojtByg-fw-13">
-          <mxGeometry x="60" y="715" width="10" height="75" as="geometry" />
+          <mxGeometry x="60" y="715" width="10" height="45" as="geometry" />
         </mxCell>
         <mxCell id="denZKagu3ZkojtByg-fw-17" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
           <mxGeometry x="810" y="375" width="10" height="325" as="geometry" />
@@ -190,7 +190,7 @@
             <mxPoint x="520" y="516" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="denZKagu3ZkojtByg-fw-53" value="store.getter(&#39;MY_INFO&#39;)" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.3;entryY=0.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="denZKagu3ZkojtByg-fw-53" value="computed : store.getter(&#39;MY_INFO&#39;)" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.3;entryY=0.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="192.5" y="849.9999999999999" as="sourcePoint" />
             <mxPoint x="511.5" y="850.8500000000001" as="targetPoint" />
