@@ -2,6 +2,7 @@
   "name": "vuetify-layout2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Develing1991.github.io/vuetiful-layout2/",
   "scripts": {
     "serve": "vue-cli-service serve --port 3000",
     "build": "vue-cli-service build",

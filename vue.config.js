@@ -1,5 +1,6 @@
 module.exports = {
-	publicPath : 'vuetiful-layout2',
+	publicPath : '/',
+	//publicPath : 'vuetiful-layout2',
 	devServer: {
 		overlay: false,
 		proxy: {
