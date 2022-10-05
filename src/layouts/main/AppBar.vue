@@ -24,7 +24,7 @@
 				<v-icon class="px-3">mdi-magnify</v-icon>
 			</router-link>
 
-			<a href="callMyApp://search"> 나의 앱 검색 실행 </a>
+			<a href="callmyapp://search"> 나의 앱 검색 실행 </a>
 			<v-badge color="pink" content="6" offset-x="25" offset-y="15">
 				<v-icon class="px-3" @click="deepLink">mdi-bell-outline</v-icon>
 			</v-badge>
@@ -45,7 +45,7 @@
 				// location.href =
 				// 	'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
 
-				location.href = 'callMyApp://search';
+				location.href = 'callmyapp://search';
 			},
 		},
 	};
