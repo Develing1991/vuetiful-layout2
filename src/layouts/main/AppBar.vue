@@ -24,14 +24,8 @@
 				<v-icon class="px-3">mdi-magnify</v-icon>
 			</router-link>
 
-			<v-badge
-				color="pink"
-				content="6"
-				offset-x="25"
-				offset-y="15"
-				@click="deepLink"
-			>
-				<v-icon class="px-3">mdi-bell-outline</v-icon>
+			<v-badge color="pink" content="6" offset-x="25" offset-y="15">
+				<v-icon class="px-3" @click="deepLink">mdi-bell-outline</v-icon>
 			</v-badge>
 		</template>
 	</LayoutMainAppBar>
