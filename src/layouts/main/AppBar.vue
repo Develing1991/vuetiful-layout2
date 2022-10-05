@@ -45,7 +45,7 @@
 				// location.href =
 				// 	'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
 
-				location.href = 'callMyApp://takePhoto';
+				location.href = 'bizMallTess://http://localhost:3000/po/ordr-prod-rslt';
 			},
 		},
 	};
