@@ -24,6 +24,7 @@
 				<v-icon class="px-3">mdi-magnify</v-icon>
 			</router-link>
 
+			<a href="callMyApp://takePhoto"> 나의 앱 사진 찍기 실행 </a>
 			<v-badge color="pink" content="6" offset-x="25" offset-y="15">
 				<v-icon class="px-3" @click="deepLink">mdi-bell-outline</v-icon>
 			</v-badge>
@@ -43,8 +44,8 @@
 				// alert('123');
 				// location.href =
 				// 	'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
-				location.href =
-					'intent://main_web#Intent;scheme=myappandroi;package=com.myappandroi.m;end';
+
+				location.href = 'callMyApp://takePhoto';
 			},
 		},
 	};
