@@ -44,8 +44,10 @@
 				// alert('123');
 				// location.href =
 				// 	'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
-
-				location.href = 'callmyapp://search';
+				const timer = setTimeout(() => {
+					location.href = 'callmyapp://search';
+					clearTimeout(timer);
+				}, 2000);
 			},
 		},
 	};
