@@ -46,6 +46,7 @@
 		},
 		methods: {
 			deepLink() {
+				alert('123');
 				location.href =
 					'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
 			},
