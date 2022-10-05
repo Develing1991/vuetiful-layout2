@@ -40,9 +40,11 @@
 		},
 		methods: {
 			deepLink() {
-				alert('123');
+				// alert('123');
+				// location.href =
+				// 	'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
 				location.href =
-					'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
+					'intent://main_web#Intent;scheme=myappandroi;package=com.myappandroi.m;end';
 			},
 		},
 	};
