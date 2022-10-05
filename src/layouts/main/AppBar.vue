@@ -24,7 +24,13 @@
 				<v-icon class="px-3">mdi-magnify</v-icon>
 			</router-link>
 
-			<v-badge color="pink" content="6" offset-x="25" offset-y="15">
+			<v-badge
+				color="pink"
+				content="6"
+				offset-x="25"
+				offset-y="15"
+				@click="deepLink"
+			>
 				<v-icon class="px-3">mdi-bell-outline</v-icon>
 			</v-badge>
 		</template>
@@ -37,6 +43,12 @@
 		name: 'MainAppBar',
 		components: {
 			LayoutMainAppBar,
+		},
+		methods: {
+			deepLink() {
+				location.href =
+					'bizMallTess://http://localhost:3000/po/ordr-prod-rslt/';
+			},
 		},
 	};
 </script>
